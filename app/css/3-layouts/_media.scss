@@ -1,4 +1,4 @@
-@media screen and (max-width: 670px) {
+@media #{$iPad} {
 
   #content {
     margin: 0 auto;
@@ -38,7 +38,7 @@
   }
 }
 
-@media screen and (max-width: 635px) {
+@media #{$iPhone} {
 
   #content {
     margin: 0;
@@ -55,11 +55,11 @@
   }
 
   #nav-container {
-    left: -272px;
+    left: -275px;
   }
 
   #nav-primary {
-    margin-right: 140px;
+    margin-right: 143px;
   }
 
   #title h2 {
