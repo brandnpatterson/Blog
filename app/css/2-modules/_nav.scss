@@ -6,13 +6,16 @@
   right: 110px;
   text-align: right;
   width: 100px;
-  z-index: 100;
 }
 
-#nav-secondary {
+#nav-container {   // Absolute
+  position: absolute;
+}
+
+#nav-secondary {       // Relative inside of Absolute
+  bottom: 46px;
+  left: 558px;
   position: relative;
-  bottom: 141px;
-  right: 0;
 }
 
 nav ul {
