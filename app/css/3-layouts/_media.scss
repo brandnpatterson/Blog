@@ -1,42 +1,4 @@
-@media #{$iPad} {
 
-  #content {
-    margin: 0 auto;
-    max-width: 90%;
-  }
-
-  #credit {
-    margin: 0;
-    text-align: left;
-  }
-
-  #first-section a {
-    margin-left: 0;
-  }
-
-  #nav-container {
-    left: -33px;
-  }
-
-  #nav-primary {
-    margin-right: 0;
-  }
-
-  #title h2 {
-    font-size: 24px;
-  }
-
-  article {
-    margin-top: 100px;
-    width: 100%;
-  }
-
-  section {
-    margin-left: 20px;
-    margin-right: 0;
-    max-width: 60%;
-  }
-}
 
 @media #{$iPhone} {
 
@@ -63,9 +25,6 @@
     font-size: 24px;
   }
 
-  #wrapper {
-    margin: 0;
-  }
   article {
     margin-top: 100px;
     width: 100%;
@@ -76,6 +35,6 @@
   }
   section {
     margin-right: 0;
-    max-width: 90%;
+    max-width: 100%;
   }
 }
