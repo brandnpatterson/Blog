@@ -1,31 +1,24 @@
-#nav-primary, #nav-secondary {
-  background-color: white;
-  border: 1px black solid;
-  font-size: 14px;
-  float: right;
-  right: 110px;
-  text-align: right;
-  width: 100px;
+nav {
+  background-color: navy;
+  text-align: center;
+  width: 100%;
 }
 
-#nav-container {   // Absolute
-  position: absolute;
+nav a {
+  color: #fff;
 }
 
-#nav-secondary {       // Relative inside of Absolute
-  bottom: 0;
-  left: 0;
-  position: relative;
+nav li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 15px;
+}
+
+nav li:active {
+  background-color: #000;
 }
 
 nav ul {
-  padding: 0 10px 0 20px;
-}
-
-hr {
-    border: none;
-    height: 1px;
-    color: #000; /* old IE */
-    background-color: #000; /* Modern Browsers */
-    width: 75px;
+  margin: 0 auto;
+  padding: 0;
 }

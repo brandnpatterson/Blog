@@ -16,3 +16,7 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
+
+p, h2 {
+  @extend .family-style;
+}

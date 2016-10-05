@@ -1,19 +1,4 @@
-header {
-  background-color: navy;
-  height: 40px;
-}
-
-header h2 {
-  color: white;
-  font-size: 18px;
-  padding: 10px;
-}
-
-p, h2 {
-  @extend .family-style;
-}
-
-header p, header h2, #title h2 {
+#title h2 {
   letter-spacing: 6px;
 }
 
@@ -31,9 +16,4 @@ header p, header h2, #title h2 {
   font-size: 14px;
   margin: 0;
   text-align: center;
-}
-
-#wrapper {
-  margin: 0 auto;
-  width: 660px;
 }
