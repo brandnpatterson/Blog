@@ -22,8 +22,7 @@ section {
 }
 
 #content {
-  background: linear-gradient(210deg, gray, transparent 25%),
-              linear-gradient(0deg, #fff, transparent);
+  background: #ffe;
   display: block;
   overflow: auto;
 }
@@ -32,6 +31,20 @@ section {
   margin-top: 30px;
 }
 
+#left-arrow {
+  left: 12%;
+  position: fixed;
+  top: 35%;
+  transform: scaleX(-1);
+  width: 55px;
+}
+
+#right-arrow {
+  right: 12%;
+  position: fixed;
+  top: 35%;
+  width: 55px;
+}
 .author {
   float: left;
 }
