@@ -35,7 +35,6 @@ section {
   left: 12%;
   position: fixed;
   top: 35%;
-  transform: scaleX(-1);
   width: 55px;
 }
 
@@ -43,6 +42,7 @@ section {
   right: 12%;
   position: fixed;
   top: 35%;
+  transform: scaleX(-1);
   width: 55px;
 }
 .author {
