@@ -2,8 +2,11 @@
 @import "1-basics/_vars";
 @import "1-basics/_mixins";
 @import "1-basics/_basics";
+@import "2-modules/_js.scss";
 @import "2-modules/_title";
 @import "2-modules/_nav";
+@import "2-modules/_arrows";
 @import "2-modules/_content";
+@import "2-modules/_page";
 @import "2-modules/_footer";
 @import "3-layouts/_media";

@@ -1,4 +1,19 @@
+@media #{$iPad} {
+
+  #left-arrow {
+    left: 2%;
+  }
+
+  #right-arrow {
+    right: 2%;
+  }
+}
+
 @media #{$iPhone} {
+
+  article {
+    max-width: 95%;
+  }
 
   #bottom-art {
     margin: 0;
@@ -15,12 +30,28 @@
   }
 
   #title h2 {
-    font-size: 40px;
+    font-size: 60px;
+  }
+
+  #title p {
+    font-size: 17px;
+  }
+
+  #left-arrow, #right-arrow {
+    position: absolute;
+    top: 200px;
+  }
+  #left-arrow {
+    left: 2%;
+  }
+
+  #right-arrow {
+    right: 2%;
   }
 
   article {
     margin-top: 100px;
-    width: 100%;
+    max-width: 80%;
   }
 
   nav {
@@ -31,6 +62,5 @@
   section {
     margin: 0 0 0 10px;
     padding: 0;
-    width: 80%;
   }
 }
