@@ -14,7 +14,10 @@ html, body, #wrapper {
     height: 100%;
     margin: 0;
     padding: 0px;
-    overflow-x: hidden;
+}
+
+#wrapper {
+  overflow-x: hidden;
 }
 
 html * {
