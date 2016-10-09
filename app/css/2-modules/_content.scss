@@ -1,13 +1,13 @@
 article {
+  font-family: Times;
   margin: 0 auto;
   margin-top: 50px;
-  width: 80%;
+  max-width: 80%;
 }
 
 section {
-  margin: 0 auto 0 60px;
+  margin: 10px auto 0 10px;
   overflow: auto;
-  width: 70%;
 }
 
 #wrapper {
@@ -18,7 +18,13 @@ section {
 #content-title {
   border-bottom: 1px gray solid;
   font-style: none;
+  padding-top: 60px;
   opacity: .65;
+}
+
+#content-title h2 {
+  margin: 0;
+  font-size: 30px;
 }
 
 #content {
@@ -31,36 +37,37 @@ section {
   margin-top: 30px;
 }
 
+.content-left {
+  float: left;
+}
+
+.content-left h2 {
+  font-size: 16px;
+}
+
+.content-right {
+  float: right;
+  padding: 12px 0 0 0;
+}
+
+.content-right a {
+  display: block;
+  padding: 2px;
+  text-align: right;
+}
+
+//    Arrows    //
+#left-arrow, #right-arrow {
+  position: fixed;
+  top: 33%;
+  width: 55px;
+}
+
 #left-arrow {
   left: 12%;
-  position: fixed;
-  top: 35%;
-  width: 55px;
 }
 
 #right-arrow {
   right: 12%;
-  position: fixed;
-  top: 35%;
   transform: scaleX(-1);
-  width: 55px;
-}
-.author {
-  float: left;
-}
-
-.author h2 {
-  font-size: 16px;
-}
-
-.page-title {
-  float: right;
-  padding: 11px 0 0 0;
-}
-
-.page-title a {
-  @extend .family-style;
-  display: block;
-  padding: 2px;
-  text-align: right;
 }

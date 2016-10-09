@@ -1,9 +1,12 @@
 @font-face {
-  font-family: 'Palitoon';
-  src: url('../fonts/palitoon-webfont.eot');
-  src: url('../fonts/palitoon-webfont.eot?#iefix') format("embedded-opentype"), url('../fonts/palitoon-webfont.woff2') format("woff2"), url('../fonts/palitoon-webfont.woff') format("woff"), url('../fonts/palitoon-webfont.ttf') format("truetype"), url('../fonts/palitoon-webfont.svg#palitoonregular') format("svg");
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'Learning Curve';
+    src: url('../fonts/LearningCurve_OT-webfont.eot');
+    src: url('../fonts/LearningCurve_OT-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/LearningCurve_OT-webfont.woff') format('woff'),
+         url('../fonts/LearningCurve_OT-webfont.ttf') format('truetype'),
+         url('../fonts/LearningCurve_OT-webfont.svg#learning_curve_proregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 html,body {
@@ -24,8 +27,4 @@ body {
   display: inline;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-}
-
-p, h2 {
-  @extend .family-style;
 }
