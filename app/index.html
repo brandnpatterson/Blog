@@ -9,13 +9,13 @@
   </head>
   <body>
 
-    <a href="#0"><img id="left-arrow" src="dist/images/left-arrow.png" alt="left arrow"></a>
-    <a href="#0"><img id="right-arrow" src="dist/images/right-arrow.png" alt="left arrow"></a>
+    <a href="#0"><img onclick="next(-1)" id="left-arrow" src="dist/images/left-arrow.png" alt="left arrow"></a>
+    <a href="#0"><img onclick="next(1)" id="right-arrow" src="dist/images/right-arrow.png" alt="left arrow"></a>
 
     <div id="wrapper">
       <nav>
         <ul>
-          <li><a href="#0">Home</a></li>
+          <li><a  id="nav-home" href="#0">Home</a></li>
           <li><a href="#0">About</a></li>
           <li><a href="#0">Archive</a></li>
           <li><a href="#0">Submit</a></li>
@@ -30,7 +30,7 @@
           </p>
         </div><!-- end title -->
 
-        <article>
+        <article class="article"id="home">
           <div id="content-title">
             <h2>Rap Albums</h2>
           </div><!-- end sub-title -->
@@ -41,10 +41,10 @@
             </div><!-- end content-left -->
 
             <aside class="content-right">
-              <a href="#0">
+              <a href="#0" id="page-link-1">
                 Dontald Drumpf's Day Off
               </a>
-              <a href="#0">
+              <a href="#0" id="page-link-2">
                 Slippers Slippers Slippers
               </a>
               <a href="#0">
@@ -231,7 +231,33 @@
               <a href="#0">Contributors</a>
             </p>
           </div><!-- end art-credit -->
-        </article><!-- end article -->
+        </article><!-- end home -->
+
+        <article class="article" id="page-1">
+          <section>
+            <div class="page-left">
+              <h2>Donald Drumpft's Day Off</h2>
+            </div><!-- end page-left -->
+
+            <aside class="page-right">
+              <p>Leggings plaid succulents poke pok pok venmo, meggings messenger bag flexitarian 8-bit master cleanse. Fingerstache bicycle rights twee, tumblr lomo marfa vegan stumptown 8-bit kickstarter godard. Flexitarian occupy slow-carb, man bun mlkshk banjo +1 fixie farm-to-table vice pork belly copper mug. Occupy prism gochujang, air plant flexitarian subway tile ramps mlkshk skateboard polaroid cred. PBR&B actually seitan narwhal, keytar kitsch meggings shoreditch. Put a bird on it lomo poke gochujang pinterest hexagon. Godard tacos letterpress food truck pug, hammock hoodie.</p>
+              <p>Tofu post-ironic affogato typewriter, succulents vape prism authentic hella beard iPhone chicharrones echo park forage. Echo park sartorial squid, af fap vice prism butcher. Cold-pressed man braid succulents pitchfork pork belly kogi, snackwave air plant you probably haven't heard of them health goth pop-up. Beard keffiyeh kinfolk, brunch whatever neutra freegan affogato pickled williamsburg pitchfork plaid keytar. IPhone williamsburg mustache hashtag fingerstache vegan, food truck health goth edison bulb chillwave etsy. Waistcoat farm-to-table health goth neutra butcher, sustainable slow-carb pug. Snackwave truffaut gochujang, mustache ethical chillwave freegan edison bulb typewriter chia ramps.</p>
+            </aside><!-- end page-right -->
+          </section><!-- end section -->
+        </article>
+
+        <article class="article" id="page-2">
+          <section>
+            <div class="page-left">
+              <h2>Slippers Slippers Slippers</h2>
+            </div><!-- end page-left -->
+
+            <aside class="page-right">
+              <p>Leggings plaid succulents poke pok pok venmo, meggings messenger bag flexitarian 8-bit master cleanse. Fingerstache bicycle rights twee, tumblr lomo marfa vegan stumptown 8-bit kickstarter godard. Flexitarian occupy slow-carb, man bun mlkshk banjo +1 fixie farm-to-table vice pork belly copper mug. Occupy prism gochujang, air plant flexitarian subway tile ramps mlkshk skateboard polaroid cred. PBR&B actually seitan narwhal, keytar kitsch meggings shoreditch. Put a bird on it lomo poke gochujang pinterest hexagon. Godard tacos letterpress food truck pug, hammock hoodie.</p>
+              <p>Tofu post-ironic affogato typewriter, succulents vape prism authentic hella beard iPhone chicharrones echo park forage. Echo park sartorial squid, af fap vice prism butcher. Cold-pressed man braid succulents pitchfork pork belly kogi, snackwave air plant you probably haven't heard of them health goth pop-up. Beard keffiyeh kinfolk, brunch whatever neutra freegan affogato pickled williamsburg pitchfork plaid keytar. IPhone williamsburg mustache hashtag fingerstache vegan, food truck health goth edison bulb chillwave etsy. Waistcoat farm-to-table health goth neutra butcher, sustainable slow-carb pug. Snackwave truffaut gochujang, mustache ethical chillwave freegan edison bulb typewriter chia ramps.</p>
+            </aside><!-- end page-right -->
+          </section><!-- end section -->
+        </article>
       </div><!-- end content -->
 
       <div id="bottom-art">
@@ -246,6 +272,6 @@
         </script> &nbsp; Brandon Patterson. All Rights Reserved.
       </a>
     </footer><!-- end footer -->
-    <!-- <script src="dist/js/main.min.js"></script> -->
+    <script src="dist/js/main.min.js"></script>
   </body>
 </html>

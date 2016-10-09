@@ -3,6 +3,7 @@ article {
   margin: 0 auto;
   margin-top: 50px;
   max-width: 80%;
+  padding: 20px 0 120px;
 }
 
 section {
@@ -23,7 +24,7 @@ section {
 }
 
 #content-title h2 {
-  margin: 0;
+  margin: 10px 0 0;
   font-size: 30px;
 }
 
@@ -54,20 +55,4 @@ section {
   display: block;
   padding: 2px;
   text-align: right;
-}
-
-//    Arrows    //
-#left-arrow, #right-arrow {
-  position: fixed;
-  top: 33%;
-  width: 55px;
-}
-
-#left-arrow {
-  left: 12%;
-}
-
-#right-arrow {
-  right: 12%;
-  transform: scaleX(-1);
 }
