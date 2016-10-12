@@ -4,10 +4,11 @@
     https://gist.github.com/simply-coded/5745cca64d4d7e8707ea002e1290b5b8
 */
 
-const          next = document.getElementById("right-arrow")
-const          prev = document.getElementById("left-arrow")
-const       navHome = document.getElementById("nav-home")
-const    linkSlide1 = document.getElementById("link-slide1")
+const  next = document.getElementById("right-arrow")
+const  prev = document.getElementById("left-arrow")
+const  nav = document.getElementById("nav")
+
+let navTo = nav.children
 
 // Carousel Object
 function Carousel() {
@@ -37,6 +38,7 @@ Carousel.prototype.prev = function () {
 Carousel.prototype.reset = function () {
   this.current = 0
 }
+
 //    Select    //
 Carousel.prototype.slide = function (j) {
   for (let i = 0; i <= this.total; i++) {
@@ -59,12 +61,22 @@ prev.onclick = () => {
   move.prev()
 }
 
-navHome.onclick = () => {
+navTo[0].onclick = () => {
   move.slide(0)
   move.reset()
 }
 
-linkSlide1.onclick = () => {
+navTo[1].onclick = () => {
   move.slide(1)
-  move.reset() + 1
+  move.reset()
+}
+
+navTo[2].onclick = () => {
+  move.slide(2)
+  move.reset()
+}
+
+navTo[3].onclick = () => {
+  move.slide(3)
+  move.reset()
 }
