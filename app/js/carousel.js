@@ -11,7 +11,7 @@ const  moveTo = document.getElementById("aside").getElementsByClassName("move-to
 const     nav = document.getElementById("nav")
 const    next = document.getElementById("right-arrow")
 const    prev = document.getElementById("left-arrow")
-const   home = document.getElementById("slide-home")
+const    home = document.getElementById("slide-home")
 
 let navTo = nav.children
 
@@ -33,7 +33,12 @@ Carousel.prototype.next = function () {
 }
 
 next.onclick = () => {
-  move.next()
+  if (home.style.display == "block"){
+    move.slide(4)
+  } else {
+    move.next()
+  }
+  prev.style.display = "block"
 }
 
 //    Previous    //
@@ -71,33 +76,32 @@ Carousel.prototype.slide = function (j) {
 let move = new Carousel()
 
 //    Navbar onclick   //
-navTo[0].onclick = () => {
+navTo[0].onclick = () => {        // Home
   move.slide(0)
-  prev.style.display = "none"
 }
 
-navTo[1].onclick = () => {
+navTo[1].onclick = () => {       // About
   move.slide(1)
   move.reset(1)
 }
 
-navTo[2].onclick = () => {
+navTo[2].onclick = () => {       // Archive
   move.slide(2)
   move.reset(2)
 }
 
-navTo[3].onclick = () => {
+navTo[3].onclick = () => {       // Submit
   move.slide(3)
   move.reset(3)
 }
 
 //    Carousel Links onclick  //
-moveTo[0].onclick = () => {
+moveTo[0].onclick = () => {      // Donald
   move.slide(4)
   move.reset(4)
 }
 
-moveTo[1].onclick = () => {
+moveTo[1].onclick = () => {      // Slippers
   move.slide(5)
   move.reset(5)
 }
