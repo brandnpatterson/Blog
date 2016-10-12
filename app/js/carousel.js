@@ -4,9 +4,10 @@
     https://gist.github.com/simply-coded/5745cca64d4d7e8707ea002e1290b5b8
 */
 
-const  next = document.getElementById("right-arrow")
-const  prev = document.getElementById("left-arrow")
-const  nav = document.getElementById("nav")
+const    next = document.getElementById("right-arrow")
+const    prev = document.getElementById("left-arrow")
+const     nav = document.getElementById("nav")
+const  moveTo = document.getElementById("aside").getElementsByClassName("move-to")
 
 let navTo = nav.children
 
@@ -79,4 +80,15 @@ navTo[2].onclick = () => {
 navTo[3].onclick = () => {
   move.slide(3)
   move.reset(3)
+}
+
+//    Carousel Links    //
+moveTo[0].onclick = () => {
+  move.slide(4)
+  move.reset(4)
+}
+
+moveTo[1].onclick = () => {
+  move.slide(5)
+  move.reset(5)
 }
