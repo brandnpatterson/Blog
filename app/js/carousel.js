@@ -4,10 +4,14 @@
     https://gist.github.com/simply-coded/5745cca64d4d7e8707ea002e1290b5b8
 */
 
+// moveTo = links on the Home page
+const  moveTo = document.getElementById("aside").getElementsByClassName("move-to")
+
+// nav = top navigation
+const     nav = document.getElementById("nav")
 const    next = document.getElementById("right-arrow")
 const    prev = document.getElementById("left-arrow")
-const     nav = document.getElementById("nav")
-const  moveTo = document.getElementById("aside").getElementsByClassName("move-to")
+const   home = document.getElementById("slide-home")
 
 let navTo = nav.children
 
@@ -28,11 +32,23 @@ Carousel.prototype.next = function () {
   this.slide(this.current)
 }
 
+next.onclick = () => {
+  move.next()
+}
+
 //    Previous    //
 Carousel.prototype.prev = function () {
-  (this.current === 0) ? this.current = this.total : this.current -= 1
+  (this.current == 0) ? this.current = this.total : this.current -= 1
 
   this.slide(this.current)
+}
+
+if (home.style.display == "block") {
+  prev.style.display = "none"
+}
+
+prev.onclick = () => {
+  move.prev()
 }
 
 //    Reset    //
@@ -54,17 +70,10 @@ Carousel.prototype.slide = function (j) {
 
 let move = new Carousel()
 
-next.onclick = () => {
-  move.next()
-}
-
-prev.onclick = () => {
-  move.prev()
-}
-
+//    Navbar onclick   //
 navTo[0].onclick = () => {
   move.slide(0)
-  move.reset(0)
+  prev.style.display = "none"
 }
 
 navTo[1].onclick = () => {
@@ -82,7 +91,7 @@ navTo[3].onclick = () => {
   move.reset(3)
 }
 
-//    Carousel Links    //
+//    Carousel Links onclick  //
 moveTo[0].onclick = () => {
   move.slide(4)
   move.reset(4)
