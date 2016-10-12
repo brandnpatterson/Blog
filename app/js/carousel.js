@@ -35,8 +35,8 @@ Carousel.prototype.prev = function () {
 }
 
 //    Reset    //
-Carousel.prototype.reset = function () {
-  this.current = 0
+Carousel.prototype.reset = function (a) {
+  this.current = a
 }
 
 //    Select    //
@@ -63,20 +63,20 @@ prev.onclick = () => {
 
 navTo[0].onclick = () => {
   move.slide(0)
-  move.reset()
+  move.reset(0)
 }
 
 navTo[1].onclick = () => {
   move.slide(1)
-  move.reset()
+  move.reset(1)
 }
 
 navTo[2].onclick = () => {
   move.slide(2)
-  move.reset()
+  move.reset(2)
 }
 
 navTo[3].onclick = () => {
   move.slide(3)
-  move.reset()
+  move.reset(3)
 }
