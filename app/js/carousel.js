@@ -54,7 +54,7 @@ if (home.style.display == "block") {
 }
 
 prev.onclick = () => {
-  move.prev()
+  move.slide(0)
 }
 
 //    Reset    //
