@@ -105,3 +105,8 @@ moveTo[1].onclick = () => {      // Slippers
   move.slide(5)
   move.reset(5)
 }
+
+moveTo[2].onclick = () => {      // Iconic
+  move.slide(6)
+  move.reset(6)
+}
