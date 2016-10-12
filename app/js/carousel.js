@@ -35,6 +35,7 @@ Carousel.prototype.next = function () {
 next.onclick = () => {
   if (home.style.display == "block"){
     move.slide(4)
+    move.reset(4)
   } else {
     move.next()
   }
