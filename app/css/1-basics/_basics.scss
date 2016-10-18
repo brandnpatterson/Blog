@@ -16,10 +16,6 @@ html, body {
     padding: 0px;
 }
 
-#wrapper {
-  overflow-x: hidden;
-}
-
 html * {
   list-style: none;
   text-decoration: none;
@@ -30,4 +26,9 @@ body {
   display: inline;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+}
+
+// font-family for all Italicized sections ('Learning Curve')
+#title h2, #title p, #content-title, .author-name, .slide-title h2 {
+  font-family: $Basic;
 }
