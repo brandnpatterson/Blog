@@ -50,8 +50,8 @@ gulp.task('lint', () => {
     .pipe(eslint.failAfterError())
 })
 
-gulp.task('rebuild', ['clean', 'build', 'watch'], () => {
-  gulp.start('serve')
+gulp.task('rb', ['clean', 'default'], () => {
+
 })
 
 gulp.task('scripts', () => {
