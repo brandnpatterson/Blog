@@ -37,6 +37,7 @@
     move.reset(3)
   }
 
+
   /*    Submission onclick functions  */
   submission[0].onclick = () => {      // Donald
     move.slide(4)
@@ -53,6 +54,7 @@
     move.reset(6)
   }
 
+
   // Next onclick function
   next.onclick = () => {
     if (home.style.display == "block" || about.style.display == "block" || archive.style.display == "block" || submit.style.display == "block" ){
@@ -63,6 +65,7 @@
     }
     prev.style.display = "block"
   }
+
 
   // Prev onclick function
   prev.onclick = () => {
@@ -79,13 +82,15 @@
     this.slide(this.current)
   }
 
+
   /*    Next    */
   Carousel.prototype.next = function () {
     (this.current == this.total) ? this.current = 0 : this.current += 1
 
     this.slide(this.current)
   }
-  
+
+
   /*    Previous    */
   Carousel.prototype.prev = function () {
     (this.current == 0) ? this.current = this.total : this.current -= 1
@@ -93,10 +98,12 @@
     this.slide(this.current)
   }
 
+
   /*    Reset    */
   Carousel.prototype.reset = function (a) {
     this.current = a
   }
+
 
   /*    Select    */
   Carousel.prototype.slide = function (j) {
