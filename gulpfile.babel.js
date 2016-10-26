@@ -16,7 +16,7 @@ gulp.task('build', ['html', 'lint', 'fonts', 'images'])
 
 gulp.task('clean', del.bind(null, ['index.html', 'app/js/**.min.js', 'dist/css/style.min.css', 'dist/fonts', 'dist/images', 'dist/index.html', 'dist/js/main.min.js'], {read: false}))
 
-gulp.task('default', ['html', 'lint', 'fonts', 'images', 'watch'], () => {
+gulp.task('default', ['clean', 'html', 'lint', 'fonts', 'images', 'watch'], () => {
   gulp.start('serve')
 })
 
@@ -50,8 +50,6 @@ gulp.task('lint', () => {
     .pipe(eslint.format())
     .pipe(eslint.failAfterError())
 })
-
-gulp.task('rb', ['clean', 'default'], () => {})
 
 gulp.task('scripts', () => {
   return gulp.src('app/js/*.js')

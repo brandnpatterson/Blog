@@ -70,7 +70,16 @@
   // Prev onclick function
   prev.onclick = () => {
     move.slide(0)
+    prev.style.display = "none"
   }
+
+  // on homepage, make back button never appear
+  prev.style.display = "none"
+
+  if (home.style.display == "none") {
+    prev.style.display = "block"
+  }
+
 
   /*    Carousel Object    */
   function Carousel() {
