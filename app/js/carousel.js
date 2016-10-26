@@ -20,6 +20,7 @@
   /*    Top Navbar onclick functions  */
   navTo[0].onclick = () => {        // Home
     move.slide(0)
+    prev.style.display = "none"
   }
 
   navTo[1].onclick = () => {       // About
