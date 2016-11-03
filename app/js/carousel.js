@@ -4,7 +4,7 @@
     https://gist.github.com/simply-coded/5745cca64d4d7e8707ea002e1290b5b8
 */
 
-!() => {
+!(() => {
 
   const
     about      = document.getElementById("slide-about"),
@@ -129,4 +129,4 @@
   }
 
   let move = new Carousel()
-}()
+})()
