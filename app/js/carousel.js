@@ -8,7 +8,7 @@
 
   const
     about      = document.getElementById("slide-about"),
-    archive    = document.getElementById("slide-archive")
+    archive    = document.getElementById("slide-archive"),
     nav        = document.getElementById("nav"),
     navTo      = nav.children,
     next       = document.getElementById("right-arrow"),
