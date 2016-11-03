@@ -1,4 +1,4 @@
-/*  Basic carousel structure Forked from:
+/*  Carousel Idea Forked from:
     @author		Jeremy England
     @company	SimplyCoded
     https://gist.github.com/simply-coded/5745cca64d4d7e8707ea002e1290b5b8
@@ -6,15 +6,16 @@
 
 !(() => {
 
-  const      about = document.getElementById("slide-about")
-  const    archive = document.getElementById("slide-archive")
-  const        nav = document.getElementById("nav")
-  const      navTo = nav.children
-  const       next = document.getElementById("right-arrow")
-  const       prev = document.getElementById("left-arrow")
-  const       home = document.getElementById("slide-home")
-  const submission = document.getElementsByClassName("submission")
-  const     submit = document.getElementById("slide-submit")
+  const
+    about      = document.getElementById("slide-about"),
+    archive    = document.getElementById("slide-archive")
+    nav        = document.getElementById("nav"),
+    navTo      = nav.children,
+    next       = document.getElementById("right-arrow"),
+    prev       = document.getElementById("left-arrow"),
+    home       = document.getElementById("slide-home"),
+    submission = document.getElementsByClassName("submission"),
+    submit     = document.getElementById("slide-submit")
 
 
   /*    Top Navbar onclick functions  */
