@@ -68,7 +68,7 @@ gulp.task('pug-pretty', () => {
 })
 
 gulp.task('scripts', () => {
-  return gulp.src(['app/js/hash.js', 'app/js/**/*.js'])
+  return gulp.src(['app/js/hash.js', 'app/js/arrows.js', 'app/js/slide.js'])
     .pipe(sourcemaps.init())
     .pipe(concat('main.js'))
     .pipe($.babel())
