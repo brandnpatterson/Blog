@@ -1,0 +1,37 @@
+doctype html
+html(lang='en-US')
+  include head.pug
+  body
+    nav
+      ul
+        li
+          a(data-click="" href='#home') Home
+        li
+          a(data-click="" href='#about') About
+        li
+          a(data-click="" href='#archive') Archive
+        li
+          a(data-click="" href='#submit') Submit
+    header
+      h2 Desmorious 22
+      p
+        | September 2016
+
+    a(href='#')
+      img#right-arrow(src='dist/images/arrow.png', alt='right arrow')
+    a(href='#')
+      img#left-arrow(src='dist/images/arrow.png', alt='left arrow')
+
+    #content
+
+    #bottom-art
+    footer
+      a(href='http://www.brandnpatterson.com/')
+        | ©
+        script(type='text/javascript').
+          document.write(new Date().getFullYear());
+        | Brandon Patterson. All Rights Reserved.
+    // end footer
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js')
+    script window.jQuery || document.write('<script src="node_modules/jquery/dist/jquery.min.js"><\x3C\/script>')
+    script(src='dist/js/main.min.js')
