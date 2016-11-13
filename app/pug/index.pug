@@ -5,27 +5,27 @@ html(lang='en-US')
     nav
       ul
         li
-          a(data-click="" href='#home') Home
+          a(href='#home') Home
         li
-          a(data-click="" href='#about') About
+          a(href='#about') About
         li
-          a(data-click="" href='#archive') Archive
+          a(href='#archive') Archive
         li
-          a(data-click="" href='#submit') Submit
+          a(href='#submit') Submit
     header
       h2 Desmorious 22
       p
         | September 2016
 
-    a(href='#0')
-      img#right-arrow(src='dist/images/arrow.png', alt='right arrow')
-    a(href='#0')
-      img#left-arrow(src='dist/images/arrow.png', alt='left arrow')
+    a.left-arrow(data-click='page' href='#')
+      img(src='dist/images/arrow.png', alt='left arrow')
+    a.right-arrow(data-click='page' href='#')
+      img(src='dist/images/arrow.png', alt='right arrow')
 
     #content
 
-    #bottom-art
     footer
+      .bottom-art
       a(href='http://www.brandnpatterson.com/')
         | ©
         script(type='text/javascript').
