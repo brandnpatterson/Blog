@@ -23,7 +23,7 @@ function getContent(fragmentId, callback){
 
   } else {
     // If the page has not been fetched before, fetch it.
-    $('#content').load('dist/html/' + fragmentId + '.html', function (content) {
+    $('#content').load('dist/views/' + fragmentId + '.html', function (content) {
 
       // Store the fetched content in the cache.
       partialsCache[fragmentId] = content;

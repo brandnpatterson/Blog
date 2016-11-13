@@ -13,9 +13,9 @@ import       sync from "browser-sync"
 const $ = load()
 const reload = sync.reload
 
-gulp.task('build', ['index', 'html', 'pug-pretty', 'lint', 'fonts', 'images'])
+gulp.task('build', ['index', 'html', 'pug-pretty', 'lint'])
 
-gulp.task('clean', del.bind(null, ['index.html', 'app/assets/html/*.html', 'dist/css/style.min.css', 'dist/fonts/*', 'dist/html/*', 'dist/images/*', 'dist/js/main.min.js'], {read: false}))
+gulp.task('clean', del.bind(null, ['index.html', 'style.css', 'app/assets/views/*.html', 'dist/views/*', 'dist/*.min.js'], {read: false}))
 
 gulp.task('default', ['build', 'watch'], () => {
   gulp.start('serve')
@@ -31,7 +31,7 @@ gulp.task('html', () => {
     .pipe(sourcemaps.init())
     .pipe(pug())
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./dist/html'))
+    .pipe(gulp.dest('./dist/views'))
 })
 
 gulp.task('index', ['scripts', 'styles'], () => {
@@ -64,18 +64,18 @@ gulp.task('pug-pretty', () => {
     .pipe(pug({
       pretty: true
     }))
-    .pipe(gulp.dest('app/assets/html'))
+    .pipe(gulp.dest('app/assets/views'))
 })
 
 gulp.task('scripts', () => {
   return gulp.src(['app/js/hash.js', 'app/js/arrows.js', 'app/js/slide.js'])
     .pipe(sourcemaps.init())
-    .pipe(concat('main.js'))
+    .pipe(concat('index.js'))
     .pipe($.babel())
     .pipe($.uglify())
     .pipe($.rename({suffix: '.min'}))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('dist/js'))
+    .pipe(gulp.dest('dist'))
 })
 
 gulp.task('serve', () => {
@@ -92,10 +92,9 @@ gulp.task('styles', () => {
   gulp.src('app/css/style.scss')
   .pipe(sourcemaps.init())
   .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
-  .pipe(rename({suffix: '.min'}))
   .pipe(prefix('last 2 versions'))
   .pipe(sourcemaps.write())
-  .pipe(gulp.dest('dist/css'))
+  .pipe(gulp.dest('./'))
 })
 
 gulp.task('watch', () => {
