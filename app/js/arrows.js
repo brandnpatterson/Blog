@@ -13,9 +13,7 @@ var Arrows = (function() {
   // bind events
   $arrowLeft.click(historyBack);
   $arrowRight.click(incrementValue);
-  $doc.on('click', '.page1', page1);
-  $doc.on('click', '.page2', page2);
-  $doc.on('click', '.page3', page3);
+  $doc.on('click', '.page', page);
   $nav.click(reset, arrowLeftHide);
 
   function incrementValue() {
@@ -44,23 +42,10 @@ var Arrows = (function() {
     return false;
   }
 
-  function page1() {
-    var page1Val = $('.page1').attr('href').substr(5);
-    value = page1Val;
-    document.getElementById('number').value = value;
-    $arrowLeft.show();
-  }
-
-  function page2() {
-    var page2Val = $('.page2').attr('href').substr(5);
-    value = page2Val;
-    document.getElementById('number').value = value;
-    $arrowLeft.show();
-  }
-
-  function page3() {
-    var page3Val = $('.page3').attr('href').substr(5);
-    value = page3Val;
+  function page() {
+    var pageVal = $(this).attr('href').substr(5);
+    console.log(pageVal);
+    value = pageVal;
     document.getElementById('number').value = value;
     $arrowLeft.show();
   }
