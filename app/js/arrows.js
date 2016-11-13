@@ -20,7 +20,6 @@ var Arrows = (function() {
     value = isNaN(value) ? 0 : value;
     value ++;
     $number = value;
-    document.getElementById('number').value = value;
     // set the href of the right-arrow to be '#page'+the value given, matching the hash with the next page
     $arrowRight.attr('href', '#page'+value);
 
@@ -38,20 +37,16 @@ var Arrows = (function() {
   function historyBack() {
     history.back();
     value --;
-    document.getElementById('number').value = value;
     return false;
   }
 
   function page() {
     var pageVal = $(this).attr('href').substr(5);
-    console.log(pageVal);
     value = pageVal;
-    document.getElementById('number').value = value;
     $arrowLeft.show();
   }
 
   function reset() {
     value = 0;
-    document.getElementById('number').value = value;
   }
 })();
