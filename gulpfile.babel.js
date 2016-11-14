@@ -15,15 +15,10 @@ const reload = sync.reload
 
 gulp.task('build', ['index', 'html', 'pug-pretty', 'lint'])
 
-gulp.task('clean', del.bind(null, ['index.html', 'style.css', 'app/assets/views/*.html', 'dist/views/*', 'dist/*.min.js'], {read: false}))
+gulp.task('clean', del.bind(null, ['index.html', 'style.css', 'app/assets/views/*', 'dist/views/*', 'dist/*.min.js'], {read: false}))
 
 gulp.task('default', ['build', 'watch'], () => {
   gulp.start('serve')
-})
-
-gulp.task('fonts', () => {
-  gulp.src(['app/assets/fonts/*.eot', 'app/assets/fonts/*.svg','app/assets/fonts/*.ttf', 'app/assets/fonts/*.woff', 'app/assets/fonts/*.woff2'])
-  .pipe(gulp.dest('dist/fonts'))
 })
 
 gulp.task('html', () => {
