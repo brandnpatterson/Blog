@@ -47,10 +47,10 @@
     "gulp-watch": "^4.3.10"
   },
   "repository": {
-    "type": "",
-    "url": ""
+    "type": "git",
+    "url": "git+https://github.com/brandnpatterson/journal.git"
   },
   "bugs": {
-    "url": ""
+    "url": "https://github.com/brandnpatterson/journal/issues"
   }
 }
