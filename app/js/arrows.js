@@ -1,3 +1,7 @@
+/**
+ * Tracks a value between 0 and 3 when arrows are clicked for scroll navigation
+ */
+
 var Arrows = (function() {
 
   // cacheDOM
