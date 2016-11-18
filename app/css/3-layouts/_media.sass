@@ -8,7 +8,10 @@
 
 @media #{$iPhone}
 
-  #content, nav, header, footer
+  #content,
+  footer,
+  header,
+  nav
     overflow-x: hidden
     width: 100%
 
@@ -22,9 +25,11 @@
   .arrow-right
     right: 2%
 
-  .arrow-left, .arrow-right
+  .arrow-left,
+  .arrow-right
     top: 233px
     z-index: 1
 
-  .arrow-left img, .arrow-right img
-    width: 35px
+    // img of both arrow-left and arrow-right
+    img
+      width: 35px

@@ -10,31 +10,32 @@ import sass       from 'gulp-sass';
 import sourcemaps from 'gulp-sourcemaps';
 import sync       from 'browser-sync';
 
-const $ = load();
-const reload = sync.reload;
+var $ = load();
+var reload = sync.reload;
 
-gulp.task('build', ['index', 'html', 'pug-pretty', 'lint']);
+gulp.task('clean', del.bind(null, ['index.html', 'style.css', 'dist/views/*', 'dist/*.js'], {read: false}));
 
-gulp.task('clean', del.bind(null, ['index.html', 'style.css', 'app/assets/views/*', 'dist/views/*', 'dist/*.min.js'], {read: false}));
-
-gulp.task('default', ['build', 'watch'], () => {
-  gulp.start('serve');
+gulp.task('default', ['html', 'styles', 'scripts', 'lint'], () => {
+  gulp.start('serve')
+  gulp.watch('app/pug/*', ['html', reload])
+  gulp.watch('app/css/**/*', ['styles', reload])
+  gulp.watch('app/js/**/*', ['scripts', reload]);
 });
 
-gulp.task('html', () => {
-  return gulp.src(['!app/pug/head.pug', 'app/pug/*.pug'])
-    .pipe(sourcemaps.init())
-    .pipe(pug())
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./dist/views'));
-});
-
-gulp.task('index', ['scripts', 'styles'], () => {
+gulp.task('html', ['html:views'], () => {
   return gulp.src('app/pug/index.pug')
     .pipe(sourcemaps.init())
     .pipe(pug())
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('./'));
+});
+
+gulp.task('html:views', () => {
+  return gulp.src(['!app/pug/head.pug', '!app/pug/index.pug', 'app/pug/*.pug'])
+    .pipe(sourcemaps.init())
+    .pipe(pug())
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('./dist/views'));
 });
 
 gulp.task('images', () => {
@@ -53,16 +54,6 @@ gulp.task('lint', () => {
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
 });
-
-gulp.task('pug-pretty', () => {
-  return gulp.src(['!app/pug/head.pug', 'app/pug/*.pug'])
-    .pipe(pug({
-      pretty: true
-    }))
-    .pipe(gulp.dest('app/assets/views'));
-});
-
-gulp.task('rebuild', ['clean', 'default']);
 
 gulp.task('scripts', () => {
   return gulp.src(['app/js/hash.js', 'app/js/arrows.js', 'app/js/slide.js'])
@@ -86,16 +77,10 @@ gulp.task('serve', () => {
 });
 
 gulp.task('styles', () => {
-  gulp.src('app/css/style.scss')
+  return gulp.src('app/css/style.scss')
   .pipe(sourcemaps.init())
   .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
   .pipe(prefix('last 2 versions'))
   .pipe(sourcemaps.write())
   .pipe(gulp.dest('./'));
-});
-
-gulp.task('watch', () => {
-  gulp.watch('app/pug/*', ['index', 'html', 'pug-pretty', reload])
-  gulp.watch('app/css/**/*', ['styles', reload])
-  gulp.watch('app/js/**/*', ['scripts', reload]);
 });
