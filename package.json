@@ -2,7 +2,7 @@
   "name": "journal",
   "version": "2.0.0",
   "scripts": {
-    "test": ""
+    "start": "gulp clean && gulp"
   },
   "licenses": [
     {
