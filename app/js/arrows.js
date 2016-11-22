@@ -11,14 +11,15 @@ var Arrows = (function() {
   var $home       = $('#home');
   var $nav        = $('#nav');
   var $number     = document.getElementById('number');
+  var $document   = $(document);
   var value       = parseInt($number.value, 10);
-  var $doc        = $(document);
 
   // bind events
   $arrowLeft.click(historyBack);
   $arrowRight.click(incrementValue);
-  $doc.on('click', '.page', page);
-  $nav.click(reset, arrowLeftHide);
+  $document.on('click', '.page', page);
+  $nav.click(arrowLeftHide);
+  $nav.click(reset);
 
   function incrementValue() {
     value = isNaN(value) ? 0 : value;
