@@ -2,7 +2,7 @@
  * Tracks a value between 0 and 3 when arrows are clicked for scroll navigation
 **/
 
-var Arrows = (function() {
+(function() {
 
   // cacheDOM
   var $arrowLeft  = $('.arrow-left');
@@ -18,7 +18,6 @@ var Arrows = (function() {
   $arrowLeft.click(historyBack);
   $arrowRight.click(incrementValue);
   $document.on('click', '.page', page);
-  $nav.click(arrowLeftHide);
   $nav.click(reset);
 
   function incrementValue() {
@@ -28,15 +27,12 @@ var Arrows = (function() {
     // set the href of the right-arrow to be '#page'+the value given, matching the hash with the next page
     $arrowRight.attr('href', '#page'+value);
 
-    if (value >= 4 || value < 0) {
+    var valueMax = 4;
+    if (value >= valueMax || value < 0) {
       value = 0;
       $arrowRight.attr('href', '#home');
     }
     $arrowLeft.show();
-  }
-
-  function arrowLeftHide() {
-    $arrowLeft.hide();
   }
 
   function historyBack() {
