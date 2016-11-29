@@ -10,9 +10,8 @@
   var $arrows     = $('.arrow-left, .arrow-right');
   var $home       = $('#home');
   var $nav        = $('#nav');
-  var $number     = document.getElementById('number');
   var $document   = $(document);
-  var value       = parseInt($number.value, 10);
+  var value       = parseInt(value, 10);
 
   // bind events
   $arrowLeft.click(historyBack);
@@ -23,7 +22,6 @@
   function incrementValue() {
     value = isNaN(value) ? 0 : value;
     value ++;
-    $number = value;
     // set the href of the right-arrow to be '#page'+the value given, matching the hash with the next page
     $arrowRight.attr('href', '#page'+value);
 
