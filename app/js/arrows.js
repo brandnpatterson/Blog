@@ -13,13 +13,9 @@
   var $document   = $(document);
   var value       = parseInt(value, 10);
 
-  // bind events
-  $arrowLeft.click(historyBack);
-  $arrowRight.click(incrementValue);
-  $document.on('click', '.page', page);
-  $nav.click(reset);
-
-  function incrementValue() {
+  function increaseValue() {
+    // ternary conditional operator
+    // if value is not a number, value == 0, else value == value
     value = isNaN(value) ? 0 : value;
     value ++;
     // set the href of the right-arrow to be '#page'+the value given, matching the hash with the next page
@@ -33,19 +29,25 @@
     $arrowLeft.show();
   }
 
-  function historyBack() {
+  function decreaseValue() {
     history.back();
     value --;
     return false;
   }
 
   function page() {
-    var pageVal = $(this).attr('href').substr(5);
-    value = pageVal;
+    var pageValue = $(this).attr('href').substr(5);
+    value = pageValue;
     $arrowLeft.show();
   }
 
-  function reset() {
+  function resetValue() {
     value = 0;
   }
+
+  // Events
+  $arrowLeft.click(decreaseValue);
+  $arrowRight.click(increaseValue);
+  $document.on('click', '.page', page);
+  $nav.click(resetValue);
 })();
