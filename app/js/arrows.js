@@ -14,18 +14,17 @@
   var value       = parseInt(value, 10);
 
   function increaseValue() {
-    // ternary conditional operator
-    // if value is not a number, value == 0, else value == value
-    value = isNaN(value) ? 0 : value;
-    value ++;
-    // set the href of the right-arrow to be '#page'+the value given, matching the hash with the next page
-    $arrowRight.attr('href', '#page'+value);
 
     var valueMax = 4;
-    if (value >= valueMax || value < 0) {
+    if (isNaN(value) || value >= valueMax || value < 0) {
       value = 0;
       $arrowRight.attr('href', '#home');
+    } else {
+      value = value;
     }
+    value ++;
+    // href matches the hash of the next page
+    $arrowRight.attr('href', '#page'+value);
     $arrowLeft.show();
   }
 
