@@ -13,7 +13,7 @@ import sync       from 'browser-sync';
 var $ = load();
 var reload = sync.reload;
 
-gulp.task('clean', del.bind(null, ['index.html', 'style.css', 'dist/views/*', 'dist/*.js'], {read: false}));
+gulp.task('clean', del.bind(null, ['index.html', 'dist/css', 'dist/views/*', 'dist/js'], {read: false}));
 
 gulp.task('default', ['html', 'styles', 'scripts', 'lint'], () => {
   gulp.start('serve')
@@ -63,7 +63,7 @@ gulp.task('scripts', () => {
     .pipe($.uglify())
     .pipe($.rename({suffix: '.min'}))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('dist/js'));
 });
 
 gulp.task('serve', () => {
@@ -82,5 +82,5 @@ gulp.task('styles', () => {
   .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
   .pipe(prefix('last 2 versions'))
   .pipe(sourcemaps.write())
-  .pipe(gulp.dest('./'));
+  .pipe(gulp.dest('dist/css'));
 });
