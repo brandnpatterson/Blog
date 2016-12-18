@@ -2,7 +2,7 @@
  * Tracks a value between 0 and 3 when arrows are clicked for scroll navigation
 **/
 
-(function() {
+!function arrowNav() {
 
   // cacheDOM
   var $arrowLeft  = $('.arrow-left');
@@ -45,4 +45,4 @@
   $arrowRight.click(increaseValue);
   $document.on('click', '.page', page);
   $nav.click(resetValue);
-})();
+}();
