@@ -38,8 +38,7 @@ function getContent(fragmentId, callback){
 function setActiveLink(fragmentId){
   $('#navbar a').each(function (i, linkElement) {
     var link = $(linkElement),
-      pageName = link.attr('href').substr(1),
-      pageDataClick = link.attr('data-click');
+      pageName = link.attr('href').substr(1);
     if(pageName === fragmentId) {
       link.attr('class', 'active');
     } else {

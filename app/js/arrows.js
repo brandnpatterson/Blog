@@ -7,8 +7,6 @@
   // cacheDOM
   var $arrowLeft  = $('.arrow-left');
   var $arrowRight = $('.arrow-right');
-  var $arrows     = $('.arrow-left, .arrow-right');
-  var $home       = $('#home');
   var $nav        = $('#nav');
   var $document   = $(document);
   var value       = parseInt(value, 10);
@@ -19,8 +17,6 @@
     if (isNaN(value) || value >= valueMax || value < 0) {
       value = 0;
       $arrowRight.attr('href', '#home');
-    } else {
-      value = value;
     }
     value ++;
     // href matches the hash of the next page
