@@ -1,2 +1,2 @@
 # Journal
-Journal archive website
+Single Page Blog Template using arrow counter navigation.
