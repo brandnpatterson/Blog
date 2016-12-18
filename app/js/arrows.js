@@ -13,7 +13,7 @@
 
   function increaseValue() {
 
-    var valueMax = 4;
+    var valueMax = 3;
     if (isNaN(value) || value >= valueMax || value < 0) {
       value = 0;
       $arrowRight.attr('href', '#home');
