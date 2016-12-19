@@ -1,41 +1,33 @@
 {
-  "name": "portfolio",
-  "version": "1.0.1",
+  "name": "brandnpatterson.surge.sh",
+  "version": "1.0.0",
   "scripts": {
     "autoprefixer": "postcss -u autoprefixer -r style.css",
-    "build:all": "npm run build:pug & npm run build:views & npm run build:css",
+    "build:all": "npm run build:php & npm run build:includes & npm run build:css & npm run build:js",
     "build:css": "npm run sass && npm run autoprefixer",
     "build:images": "imagemin app/images/* -o dist/images",
     "build:js": "webpack",
-    "build:pug": "pug app/pug/index.pug -o ./",
-    "build:views": "pug app/pug/*.pug -o dist/views",
-    "clean": "del index.html app/assets/views dist/css dist/js dist/views/*.html",
+    "build:php": "html-minifier --input-dir ./app/php --output-dir ./ --html5 --collapse-whitespace",
+    "build:includes": "html-minifier --input-dir ./app/includes --output-dir ./dist/includes --html5 --collapse-whitespace",
+    "clean": "del *.php dist/css dist/js",
+    "clean:images": "del dist/images/*",
     "lint": "eslint app/js",
     "sass": "node-sass --output-style compressed -o dist/css app/sass",
-    "server": "browser-sync start --server --files='index.html, dist/css/style.css, dist/js/bundle.js' --no-notify --port 8888",
-    "start": "npm run clean && npm run build:js && npm run build:watch",
-    "build:watch": "npm run build:all & npm run watch:all",
-    "watch:all": "npm-run-all -p watch:css watch:js watch:pug watch:views server",
+    "server": "gulp",
+    "start": "npm run clean && npm run build:all && npm run server & npm run watch:all",
+    "watch:all": "npm-run-all -p watch:css watch:js watch:php",
     "watch:css": "onchange 'app/sass/**/*.sass' -- npm run build:css",
     "watch:js": "onchange 'app/js/**/*.js' -- webpack",
-    "watch:pug": "onchange 'app/pug/*.pug' -- npm run build:pug",
-    "watch:views": "onchange 'app/pug/*.pug' -- npm run build:views"
+    "watch:php": "onchange 'app/php/*.php' -- npm run build:php"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/angular/angular.io/blob/master/LICENSE"
-    }
-  ],
   "author": "Brandon Patterson",
   "description": "Brandon Patterson's web development portfolio",
   "main": "index.html",
   "license": "ISC",
-  "url": "http://www.brandnpatterson.net",
-  "homepage": "http://www.brandnpatterson.net",
+  "url": "brandnpatterson.surge.sh",
+  "homepage": "brandnpatterson.surge.sh",
   "dependencies": {
-    "jquery": "^3.1.1",
-    "mustache": "^2.3.0"
+    "jquery": "^3.1.1"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.6",
@@ -46,23 +38,24 @@
     "babel-preset-es2015": "^6.16.0",
     "babel-preset-stage-0": "^6.16.0",
     "babel-register": "^6.16.3",
-    "browser-sync": "^2.17.5",
+    "browser-sync": "^2.18.5",
     "del": "^2.2.2",
     "eslint": "^2.10.2",
+    "gulp": "^3.9.1",
+    "gulp-mamp": "0.0.5",
     "imagemin-cli": "^3.0.0",
     "node-sass": "^3.11.2",
     "npm-run-all": "^2.1.1",
     "onchange": "^2.4.0",
     "postcss-cli": "^2.5.2",
-    "pug-cli": "^1.0.0-alpha6",
     "uglify-js": "^2.7.4",
     "webpack": "^1.13.3"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/brandnpatterson.github.io.git"
+    "url": "https://github.com/brandnpatterson/brandnpatterson.surge.sh"
   },
   "bugs": {
-    "url": "https://github.com/brandnpatterson/brandnpatterson.github.io/issues"
+    "url": ""
   }
 }
