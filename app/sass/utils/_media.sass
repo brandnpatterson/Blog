@@ -1,5 +1,7 @@
 @media #{$desktop}
 
+  .divider.mobile
+    display: none
 
 @media #{$iPad}
 
@@ -20,15 +22,21 @@
   .jumbotron
     width: 600px
 
+  .divider.mobile
+    display: none
+
   .post
     max-width: 450px
 
 @media #{$iPhone}
 
   body,
-  footer
+  footer,
+  #content,
+  .container
     margin: 0 auto
     overflow-x: hidden
+    width: 100%
 
   footer
     padding-left: 20px
@@ -37,21 +45,14 @@
   aside
     display: none
 
-  #content
-    max-width: 400px
-
-  .container
-    margin: 0 auto
-    width: 100%
-
   .container > img
     display: none
 
   .jumbotron h2
-    padding-top: 20px
-    position: relative
-    left: 8%
+    padding: 20px 0 200px 5%
+    max-width: 350px
 
   .post
-    max-width: 360px
-    margin-left: 0.5% !important
+    border: none !important
+    border-radius: none
+    max-width: 100%
