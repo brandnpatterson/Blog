@@ -1,5 +1,5 @@
 {
-  "name": "new-project",
+  "name": "brandnpatterson.surge.sh",
   "version": "1.0.0",
   "scripts": {
     "autoprefixer": "postcss -u autoprefixer -r style.css",
@@ -20,18 +20,12 @@
     "watch:js": "onchange 'app/js/**/*.js' -- webpack",
     "watch:php": "onchange 'app/php/*.php' -- npm run build:php"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/angular/angular.io/blob/master/LICENSE"
-    }
-  ],
   "author": "Brandon Patterson",
   "description": "Brandon Patterson's web development portfolio",
   "main": "index.html",
   "license": "ISC",
-  "url": "",
-  "homepage": "",
+  "url": "brandnpatterson.surge.sh",
+  "homepage": "brandnpatterson.surge.sh",
   "dependencies": {
     "jquery": "^3.1.1"
   },
@@ -58,8 +52,8 @@
     "webpack": "^1.13.3"
   },
   "repository": {
-    "type": "",
-    "url": ""
+    "type": "git",
+    "url": "https://github.com/brandnpatterson/brandnpatterson.surge.sh"
   },
   "bugs": {
     "url": ""

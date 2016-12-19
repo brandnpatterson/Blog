@@ -1,2 +1,2 @@
-# Portfolio
-My front end web development portfolio
+# Surge Blog
+These are my thoughts on tech.
