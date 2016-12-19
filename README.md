@@ -1,2 +1,2 @@
-# Blog Template
-Single Page Blog Template using arrow counter navigation.
+# Blog 2017
+My Blog

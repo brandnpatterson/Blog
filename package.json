@@ -1,9 +1,25 @@
 {
-  "name": "journal",
-  "version": "2.0.0",
+  "name": "portfolio",
+  "version": "1.0.1",
   "scripts": {
-    "start": "gulp clean && gulp",
-    "test": ""
+    "autoprefixer": "postcss -u autoprefixer -r style.css",
+    "build:all": "npm run build:pug & npm run build:views & npm run build:css",
+    "build:css": "npm run sass && npm run autoprefixer",
+    "build:images": "imagemin app/images/* -o dist/images",
+    "build:js": "webpack",
+    "build:pug": "pug app/pug/index.pug -o ./",
+    "build:views": "pug app/pug/*.pug -o dist/views",
+    "clean": "del index.html app/assets/views dist/css dist/js dist/views/*.html",
+    "lint": "eslint app/js",
+    "sass": "node-sass --output-style compressed -o dist/css app/sass",
+    "server": "browser-sync start --server --files='index.html, dist/css/style.css, dist/js/bundle.js' --no-notify --port 8888",
+    "start": "npm run clean && npm run build:js && npm run build:watch",
+    "build:watch": "npm run build:all & npm run watch:all",
+    "watch:all": "npm-run-all -p watch:css watch:js watch:pug watch:views server",
+    "watch:css": "onchange 'app/sass/**/*.sass' -- npm run build:css",
+    "watch:js": "onchange 'app/js/**/*.js' -- webpack",
+    "watch:pug": "onchange 'app/pug/*.pug' -- npm run build:pug",
+    "watch:views": "onchange 'app/pug/*.pug' -- npm run build:views"
   },
   "licenses": [
     {
@@ -12,46 +28,41 @@
     }
   ],
   "author": "Brandon Patterson",
-  "description": "Journal archive website",
+  "description": "Brandon Patterson's web development portfolio",
   "main": "index.html",
   "license": "ISC",
-  "url": "",
-  "homepage": "",
+  "url": "http://www.brandnpatterson.net",
+  "homepage": "http://www.brandnpatterson.net",
   "dependencies": {
-    "jquery": "^3.1.1"
+    "jquery": "^3.1.1",
+    "mustache": "^2.3.0"
   },
   "devDependencies": {
+    "autoprefixer": "^6.3.6",
     "babel-core": "^6.17.0",
     "babel-eslint": "^6.1.2",
+    "babel-loader": "^6.2.5",
     "babel-polyfill": "^6.16.0",
     "babel-preset-es2015": "^6.16.0",
     "babel-preset-stage-0": "^6.16.0",
     "babel-register": "^6.16.3",
     "browser-sync": "^2.17.5",
-    "del": "^2.2.1",
-    "eslint": "^3.8.1",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-babel": "^6.1.2",
-    "gulp-cache": "^0.4.5",
-    "gulp-concat": "^2.6.0",
-    "gulp-eslint": "^2.1.0",
-    "gulp-htmlmin": "^2.0.0",
-    "gulp-imagemin": "^3.0.2",
-    "gulp-load-plugins": "^1.3.0",
-    "gulp-pug": "^3.1.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.3.2",
-    "gulp-sourcemaps": "^1.8.1",
-    "gulp-uglify": "^2.0.0",
-    "gulp-useref": "^3.1.2",
-    "gulp-watch": "^4.3.10"
+    "del": "^2.2.2",
+    "eslint": "^2.10.2",
+    "imagemin-cli": "^3.0.0",
+    "node-sass": "^3.11.2",
+    "npm-run-all": "^2.1.1",
+    "onchange": "^2.4.0",
+    "postcss-cli": "^2.5.2",
+    "pug-cli": "^1.0.0-alpha6",
+    "uglify-js": "^2.7.4",
+    "webpack": "^1.13.3"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/brandnpatterson/journal.git"
+    "url": "git+https://github.com/brandnpatterson.github.io.git"
   },
   "bugs": {
-    "url": "https://github.com/brandnpatterson/journal/issues"
+    "url": "https://github.com/brandnpatterson/brandnpatterson.github.io/issues"
   }
 }

@@ -1,12 +1,22 @@
-@import "0-tools/_normalize";
-@import "1-basics/_vars";
-@import "1-basics/_basics";
-@import "1-basics/_color";
-@import "2-modules/_header";
-@import "2-modules/_home";
-@import "2-modules/_nav";
-@import "2-modules/_arrows";
-@import "2-modules/_content";
-@import "2-modules/_view";
-@import "2-modules/_footer";
-@import "2-modules/_media";
+//    utils    //
+@import "utils/_normalize";
+
+//    basics    //
+@import "basics/_vars";
+@import "basics/_basics";
+@import "basics/_color";
+
+//    components    //
+@import "components/_container";
+@import "components/_footer";
+@import "components/_header";
+@import "components/_nav";
+@import "components/_posts";
+
+//    pages    //
+@import "pages/_about";
+@import "pages/_archive";
+@import "pages/_home";
+@import "pages/_index";
+
+@import "utils/_media";

@@ -2,36 +2,27 @@ doctype html
 html(lang='en-US')
   include head.pug
   body
-    nav#nav
-      ul
-        li
-          a(href='#home') Home
-        li
-          a(href='#about') About
-        li
-          a(href='#archive') Archive
-        li
-          a(href='#submit') Submit
-    header
-      h2 Desmorious 22
-      p
-        | September 2016
+    .container.header
+      h1 @
+      h2 brandnpatterson
 
-    a.arrow-left.hidden(data-click='page' href='#')
-      img(src='dist/images/arrow.png', alt='arrow right')
-    a.arrow-right.increase(data-click='page' href='#page1')
-      img(src='dist/images/arrow.png', alt='arrow right')
+    .container
+      nav
+        a(href='#latest') Latest
+        a(href='#archive') Archive
+        a(href='#about') About Me
 
-    #content
+    .container.jumbotron
+      h2 I've been learning how to build things on the web. This is what I'm up to today.
+      img(src='dist/images/me.jpg')
 
-    footer
-      .bottom-art
-      a(href='http://brandnpatterson.net/')
-        | ©
-        script(type='text/javascript').
-          document.write(new Date().getFullYear());
-        | &nbsp; Brandon Patterson. All Rights Reserved.
-    // end footer
-    script(src='//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js')
-    script window.jQuery || document.write('<script src=node_modules/jquery/dist/jquery.min.js><\x3C\/script>')
-    script(src='dist/js/index.min.js')
+    .container
+      #content
+      aside
+        a(href='mailto:brandnpatterson@gmail.com') Email me
+        a(href='https://github.com/brandnpatterson') Github
+        a(href='https://twitter.com/brandnpatterson') Twitter
+
+    include footer.pug
+
+    script(src='dist/js/bundle.js')
