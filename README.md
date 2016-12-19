@@ -1,2 +1,2 @@
-# Blog 2017
-My Blog
+# Surge Blog
+These are my thoughts on tech.
