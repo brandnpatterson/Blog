@@ -10,7 +10,7 @@ var $ = require('jquery');
   var partialsCache = {};
 
   function getContent(fragmentId, callback) {
-    $('#content').load('dist/views/' + fragmentId + '.html', function (content) {
+    $('#content').load('dist/includes/' + fragmentId + '.php', function (content) {
       partialsCache[fragmentId] = content;
       callback(content);
     });
