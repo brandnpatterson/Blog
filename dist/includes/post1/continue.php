@@ -1,0 +1,1 @@
+<a class="continue-reading" href="#post2/post-body">Continue Reading >></a>
