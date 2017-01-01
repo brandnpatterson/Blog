@@ -3,6 +3,10 @@
   .divider.mobile
     display: none
 
+  .post img
+    float: right
+    padding-right: 200px
+
 @media #{$iPad}
 
   body
@@ -11,6 +15,9 @@
 
   aside
     right: 30px
+
+  .jumbotron h2
+    max-width: 300px
 
   .container
     margin: 0 auto
@@ -33,7 +40,7 @@
   .container
     margin: 0 auto
     overflow-x: hidden
-    width: 100%
+    width: 100vw
 
   footer
     padding-left: 20px
@@ -42,7 +49,7 @@
   aside
     display: none
 
-  .container > img
+  .jumbotron > img
     display: none
 
   .jumbotron h2
@@ -52,7 +59,10 @@
   .post
     border: none !important
     border-radius: none !important
-    max-width: 100%
+    width: 100vw
+
+  .continue-reading
+    padding-left: 20px
 
   .about
     padding: 30px

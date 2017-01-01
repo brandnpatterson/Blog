@@ -3,23 +3,23 @@
   "version": "1.0.1",
   "scripts": {
     "autoprefixer": "postcss -u autoprefixer -r style.css",
-    "build:all": "npm run build:pug & npm run build:views & npm run build:css",
+    "build:all": "npm run build:pug & npm run build:includes & npm run build:css",
     "build:css": "npm run sass && npm run autoprefixer",
     "build:images": "imagemin app/images/* -o dist/images",
     "build:js": "webpack",
     "build:pug": "pug app/pug/index.pug -o ./",
-    "build:views": "pug app/pug/*.pug -o dist/views",
-    "clean": "del index.html app/assets/views dist/css dist/js dist/views/*.html",
+    "build:includes": "pug app/includes/*.pug -o dist/includes & pug app/includes/post1/*.pug -o dist/includes/post1 & pug app/includes/post2/*.pug -o dist/includes/post2",
+    "clean": "del index.html dist/css dist/js dist/includes/*.html",
     "lint": "eslint app/js",
     "sass": "node-sass --output-style compressed -o dist/css app/sass",
     "server": "browser-sync start --server --files='index.html, dist/css/style.css, dist/js/bundle.js' --no-notify --port 8888",
     "start": "npm run clean && npm run build:js && npm run build:watch",
     "build:watch": "npm run build:all & npm run watch:all",
-    "watch:all": "npm-run-all -p watch:css watch:js watch:pug watch:views server",
+    "watch:all": "npm-run-all -p watch:css watch:js watch:pug watch:includes server",
     "watch:css": "onchange 'app/sass/**/*.sass' -- npm run build:css",
     "watch:js": "onchange 'app/js/**/*.js' -- webpack",
     "watch:pug": "onchange 'app/pug/*.pug' -- npm run build:pug",
-    "watch:views": "onchange 'app/pug/*.pug' -- npm run build:views"
+    "watch:includes": "onchange 'app/pug/includes/**/*.pug' -- npm run build:includes"
   },
   "licenses": [
     {

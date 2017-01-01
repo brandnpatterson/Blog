@@ -1,7 +1,7 @@
 doctype html
 html(lang='en-US')
-  include vars.pug
-  include head.pug
+  include ../includes/vars.pug
+  include ../includes/head.pug
   body
     .container.header
       h1 @
@@ -26,6 +26,6 @@ html(lang='en-US')
         a(href='https://twitter.com/brandnpatterson') Twitter
         a(href='mailto:brandnpatterson@gmail.com') Email
 
-    include footer.pug
+    include ../includes/footer.pug
 
     script(src='dist/js/bundle.js')

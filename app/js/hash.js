@@ -2,7 +2,6 @@
  * Inspired By Curran Kelleher October 2014
 **/
 
-// Require jQuery for the following
 var $ = require('jquery');
 
 !function () {
@@ -10,7 +9,7 @@ var $ = require('jquery');
   var partialsCache = {};
 
   function getContent(fragmentId, callback) {
-    $('#content').load('dist/views/' + fragmentId + '.html', function (content) {
+    $('#content').load('dist/includes/' + fragmentId + '.html', function (content) {
       partialsCache[fragmentId] = content;
       callback(content);
     });
