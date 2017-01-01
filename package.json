@@ -1,0 +1,62 @@
+{
+  "name": "brandnpatterson.surge.sh",
+  "version": "1.0.0",
+  "scripts": {
+    "autoprefixer": "postcss -u autoprefixer -r style.css",
+    "build:all": "npm run build:php & npm run build:includes & npm run build:css & npm run build:js",
+    "build:css": "npm run sass && npm run autoprefixer",
+    "build:images": "imagemin app/images/* -o dist/images",
+    "build:js": "webpack",
+    "build:php": "html-minifier --input-dir ./app/php --output-dir ./ --html5 --collapse-whitespace",
+    "build:includes": "html-minifier --input-dir ./app/includes --output-dir ./dist/includes --html5 --collapse-whitespace",
+    "clean": "del *.php dist/css dist/includes dist/js",
+    "clean:images": "del dist/images/*",
+    "lint": "eslint app/js",
+    "sass": "node-sass --output-style compressed -o dist/css app/sass",
+    "server": "gulp",
+    "start": "npm run clean && npm run build:all && npm run server & npm run watch:all",
+    "watch:all": "npm-run-all -p watch:css watch:includes watch:js watch:php",
+    "watch:css": "onchange 'app/sass/**/*.sass' -- npm run build:css",
+    "watch:includes": "onchange 'app/includes/**/*.php' -- npm run build:includes",
+    "watch:js": "onchange 'app/js/**/*.js' -- webpack",
+    "watch:php": "onchange 'app/php/*.php' -- npm run build:php"
+  },
+  "author": "Brandon Patterson",
+  "description": "Brandon Patterson's web development portfolio",
+  "main": "index.html",
+  "license": "ISC",
+  "url": "brandnpatterson.surge.sh",
+  "homepage": "brandnpatterson.surge.sh",
+  "dependencies": {
+    "jquery": "^3.1.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "babel-core": "^6.17.0",
+    "babel-eslint": "^6.1.2",
+    "babel-loader": "^6.2.5",
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "babel-register": "^6.16.3",
+    "browser-sync": "^2.18.5",
+    "del": "^2.2.2",
+    "eslint": "^2.10.2",
+    "gulp": "^3.9.1",
+    "gulp-mamp": "0.0.5",
+    "imagemin-cli": "^3.0.0",
+    "node-sass": "^3.11.2",
+    "npm-run-all": "^2.1.1",
+    "onchange": "^2.4.0",
+    "postcss-cli": "^2.5.2",
+    "uglify-js": "^2.7.4",
+    "webpack": "^1.13.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brandnpatterson/brandnpatterson.surge.sh"
+  },
+  "bugs": {
+    "url": "https://github.com/brandnpatterson/brandnpatterson.surge.sh/issues"
+  }
+}

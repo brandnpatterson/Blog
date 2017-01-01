@@ -1,0 +1,67 @@
+@media #{$desktop}
+
+  .divider.mobile
+    display: none
+
+  .post img
+    float: right
+    padding-right: 200px
+  
+@media #{$iPad}
+
+  body
+    margin: 0 auto
+    width: 600px
+
+  aside
+    right: 30px
+
+  .jumbotron h2
+    max-width: 300px
+
+  .container
+    margin: 0 auto
+    width: 600px
+
+  .jumbotron
+    width: 600px
+
+  .divider.mobile
+    display: none
+
+  .post
+    max-width: 450px
+
+@media #{$iPhone}
+
+  body,
+  footer,
+  #content,
+  .container
+    margin: 0 auto
+    overflow-x: hidden
+    width: 100vw
+
+  footer
+    padding-left: 20px
+    text-align: left
+
+  aside
+    display: none
+
+  .jumbotron > img
+    display: none
+
+  .jumbotron h2
+    padding: 20px 0 200px 10px
+    max-width: 400px
+
+  .post
+    border: none !important
+    border-radius: none !important
+    width: 100vw
+
+  .about
+    padding: 30px
+    max-width: 100%
+    text-align: left
