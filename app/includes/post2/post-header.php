@@ -5,7 +5,7 @@
   <p class="name">Brandon Patterson</p>
   <div class="divider"></div>
   <h3>
-    After laying out the basic foundation of this blog, I decided that I needed to make a few fundamental changes to the structure of the content and have a preview section available for the home page.
+    After laying out the basic foundation of this blog, I decided that I needed to make some fundamental changes to the structure of the content and have a preview section available for the home page, which I refer to as posts. Here is a picture of my current file structure.
   </h3>
   <img src="dist/images/file-structure.png" />
 </div>

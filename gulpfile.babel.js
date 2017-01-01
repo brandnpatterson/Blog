@@ -16,7 +16,7 @@ gulp.task('mamp', ['start']);
 
 gulp.task('browser-sync', function() {
   browserSync.init(['index.php', 'dist/css/*.css', 'dist/includes/*', 'dist/js/*.js'], {
-    proxy: 'localhost:8888/surge%20blog%20php',
+    proxy: 'localhost:8888/surge%20blog',
     notify: false
   });
 });
