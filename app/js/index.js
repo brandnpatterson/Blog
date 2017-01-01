@@ -1,2 +1,2 @@
 import './hash.js';
-import './scroll-to.js';
+import './scroll-top.js';
