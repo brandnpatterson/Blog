@@ -13,6 +13,8 @@
     <p>
       This file structure feels scalable for what I'm doing and I'm looking forward to making it even better as I move forward with it. My next steps are to make the "Continue Reading" link dissapear on selection.
     </p>
+    <p>
+    I made it dissapear by dividing it into its own PHP file.</p>
     <a class="go-back" href="#latest">
       Go Back
     </a>

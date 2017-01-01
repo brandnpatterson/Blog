@@ -1,2 +1,2 @@
 import './hash.js';
-import './continue-reading';
+import './scroll-to.js';

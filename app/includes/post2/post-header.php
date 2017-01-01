@@ -8,9 +8,4 @@
     After laying out the basic foundation of this blog, I decided that I needed to make a few fundamental changes to the structure of the content and have a preview section available for the home page.
   </h3>
   <img src="dist/images/file-structure.png" />
-  <div>
-    <a class="continue-reading" href="#post2/post-body">
-      Continue Reading >>
-    </a>
-  </div>
 </div>
