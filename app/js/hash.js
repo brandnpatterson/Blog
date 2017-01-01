@@ -2,7 +2,6 @@
  * Inspired By Curran Kelleher October 2014
 **/
 
-// Require jQuery for the following
 var $ = require('jquery');
 
 !function () {
