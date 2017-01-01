@@ -1,6 +1,6 @@
 {
-  "name": "portfolio",
-  "version": "1.0.1",
+  "name": "brandnpatterson.surge.sh",
+  "version": "1.0.0",
   "scripts": {
     "autoprefixer": "postcss -u autoprefixer -r style.css",
     "build:all": "npm run build:pug & npm run build:includes & npm run build:css",
@@ -11,8 +11,9 @@
     "build:includes": "pug app/includes/*.pug -o dist/includes & pug app/includes/post1/*.pug -o dist/includes/post1 & pug app/includes/post2/*.pug -o dist/includes/post2",
     "clean": "del index.html dist/css dist/js dist/includes/*.html",
     "lint": "eslint app/js",
+    "restart": "npm run watch:all",
     "sass": "node-sass --output-style compressed -o dist/css app/sass",
-    "server": "browser-sync start --server --files='index.html, dist/css/style.css, dist/js/bundle.js' --no-notify --port 8888",
+    "server": "browser-sync start --server --files='index.html, style.css, dist/index.min.js, dist/index.min.js.map' --no-notify --port 8888",
     "start": "npm run clean && npm run build:js && npm run build:watch",
     "build:watch": "npm run build:all & npm run watch:all",
     "watch:all": "npm-run-all -p watch:css watch:js watch:pug watch:includes server",
@@ -21,21 +22,14 @@
     "watch:pug": "onchange 'app/pug/*.pug' -- npm run build:pug",
     "watch:includes": "onchange 'app/pug/includes/**/*.pug' -- npm run build:includes"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/angular/angular.io/blob/master/LICENSE"
-    }
-  ],
   "author": "Brandon Patterson",
   "description": "Brandon Patterson's web development portfolio",
   "main": "index.html",
   "license": "ISC",
-  "url": "http://www.brandnpatterson.net",
-  "homepage": "http://www.brandnpatterson.net",
+  "url": "brandnpatterson.surge.sh",
+  "homepage": "brandnpatterson.surge.sh",
   "dependencies": {
-    "jquery": "^3.1.1",
-    "mustache": "^2.3.0"
+    "jquery": "^3.1.1"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.6",
@@ -55,14 +49,15 @@
     "onchange": "^2.4.0",
     "postcss-cli": "^2.5.2",
     "pug-cli": "^1.0.0-alpha6",
+    "source-map": "^0.5.6",
     "uglify-js": "^2.7.4",
     "webpack": "^1.13.3"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/brandnpatterson.github.io.git"
+    "url": "https://github.com/brandnpatterson/brandnpatterson.surge.sh"
   },
   "bugs": {
-    "url": "https://github.com/brandnpatterson/brandnpatterson.github.io/issues"
+    "url": "https://github.com/brandnpatterson/brandnpatterson.surge.sh/issues"
   }
 }
