@@ -13,6 +13,6 @@ var $ = require('jquery');
   $window.on('click', $continueReading, scrollTop);
 
   function scrollTop() {
-    $window.scrollTop($('.post-body').offset().top);
+    $window.scrollTop($('#content').offset().top);
   }
 }();
