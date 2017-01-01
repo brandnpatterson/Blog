@@ -9,6 +9,10 @@
     <nav class="container">
       <a href="#latest">Latest</a>
       <a href="#about">About Me</a>
+
+      <!-- if not logged in, show sign-up, if logged in, show log-in -->
+      <?php include 'dist/includes/nav/sign-up.php' ?>
+      <?php include 'dist/includes/nav/log-in.php' ?>
     </nav><!-- end container-nav -->
 
     <div class="container jumbotron">
