@@ -1,1 +1,3 @@
-<a class="sign-up" href="#sign-up">Sign Up</a>
+<a class="sign-up" href="#sign-up">
+  Sign Up
+</a>
