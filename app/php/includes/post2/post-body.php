@@ -10,7 +10,7 @@
       Following the header, there is "continue.php" for each pos, which allows the Continue Reading link to be only included in the post header and not the post body. I was unable to use jQuery to simply hide or show the divs because they were dynamically included. I can imagine that there is a possible solution, but allowing the php file to be seperately included into the header allows exactly what I need.
     </p>
     <p>
-      I soon realized that I could do the same thing using Pug includes, and without a PHP server, but I'm going to focus on PHP for now so that I can use a database for a log in system for this blog.
+      I soon realized that I could do the same thing using Pug includes, and without a PHP server, but I'm going to focus on PHP for now so that I can use a database for a log in system for this blog (Although this live version is using pug/html). 
     </p>
     <div class="divider"></div>
     <p>
