@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "autoprefixer": "postcss -u autoprefixer -r style.css",
-    "build:all": "npm run build:pug & npm run build:includes & npm run build:css",
+    "build:all": " npm run build:css && npm run build:pug & npm run build:includes & npm run build:js",
     "build:css": "npm run sass && npm run autoprefixer",
     "build:images": "imagemin app/images/* -o dist/images",
     "build:js": "webpack",
@@ -14,8 +14,7 @@
     "lint": "eslint app/js",
     "sass": "node-sass --output-style compressed -o dist/css app/sass",
     "server": "browser-sync start --server --files='index.html, style.css, dist/index.min.js, dist/index.min.js.map' --no-notify --port 8888",
-    "start": "npm run clean && npm run build:js && npm run build:watch",
-    "build:watch": "npm run build:all & npm run watch:all",
+    "start": "npm run clean && npm run build:all && npm run watch:all",
     "watch:all": "npm-run-all -p watch:css watch:js watch:pug watch:includes server",
     "watch:css": "onchange 'app/sass/**/*.sass' -- npm run build:css",
     "watch:includes": "onchange 'app/pug/includes/**/*.pug' -- npm run build:includes",
