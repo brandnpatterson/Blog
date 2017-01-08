@@ -1,7 +1,7 @@
 doctype html
 html(lang='en-US')
-  include includes/vars.pug
-  include includes/head.pug
+  include includes/components/vars.pug
+  include includes/components/head.pug
   body
     .container.header
       h1 @
@@ -9,9 +9,9 @@ html(lang='en-US')
 
     .container
       nav
-        a(href='#latest') Latest
+        a(href='#pages/latest') Latest
         //- a(href='#archive') Archive
-        a(href='#about') About Me
+        a(href='#pages/about') About Me
 
     .container.jumbotron
       h2.fade-in-one I've learned how to build things on the web.
@@ -26,6 +26,6 @@ html(lang='en-US')
         a(href='https://twitter.com/brandnpatterson') Twitter
         a(href='mailto:brandnpatterson@gmail.com') Email
 
-    include includes/footer.pug
+    include includes/components/footer.pug
 
     script(src='dist/js/bundle.js')

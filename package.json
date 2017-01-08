@@ -7,7 +7,7 @@
     "build:css": "npm run sass && npm run autoprefixer",
     "build:images": "imagemin app/images/* -o dist/images",
     "build:js": "webpack",
-    "build:pug": "pug app/pug/index.pug -o ./",
+    "build:pug": "pug app/pug/index.pug -o ./ ",
     "build:includes": "pug app/pug/includes -o dist/includes",
     "clean": "del index.html dist/css dist/js dist/includes",
     "clean:images": "del dist/images",
