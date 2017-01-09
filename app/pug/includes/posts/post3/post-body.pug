@@ -1,8 +1,8 @@
 include post-header.pug
 .post.post-body
-  p I soon discovered that using the Instagram API is not as easily as calling and using data like you would via github's API, for example. Luckily, I found out about a library called #[a(href='instafeedjs.com' target='_blank') Instafeedjs], which is described on their website as follows:
+  p I soon discovered that using the Instagram API is not as easy as calling and using data like you would via github's API, for example. Luckily, I found out about a library called #[a(href='http://www.instafeedjs.com' target='_blank') Instafeedjs], which is described on their website as follows:
   img(src='dist/images/instafeed.png')
-  p As much as this is true, there are a few steps to take in order for anything to be called from Instagram to your website.
+  p As much as this is true, there are still a few steps to take in order for anything to be called from Instagram to your website.
 
   // Installation
   h2 1. Installation
@@ -14,14 +14,14 @@ include post-header.pug
 
   // Client ID
   h2 3. Client ID
-  p If you follow along on #[a(href='instafeedjs.com' target='_blank') Instafeedjs.com], you’ll notice a few examples of code that are a great help in getting started. You’ll also notice a Requirements section. One of the first things noted is your Client ID.
+  p If you follow along on #[a(href='http://www.instafeedjs.com' target='_blank') Instafeedjs.com], you’ll notice a few examples of code that are a great help in getting started. You’ll also notice a Requirements section. One of the first things noted is your Client ID.
   img(src='dist/images/requirements.png')
   p The first place I found on Google search to find my Instagram client ID (not username) is a website called #[a(href='https://smashballoon.com/instagram-feed/' target='_blank') Smash Balloon]. Here you can go to “Try the Demo” and simply type your username in and it returns a series of numbers, which is your Instagram client ID.
   p Instafeedjs doesn’t mention this as explicitly in their first examples, but in order to populate your website with your 20 latest pictures, you must use an authentication key. Now, Instafeedjs does allow for a variety of other things such as showing only images with specific hash tags, which is such a great feature. This tutorial does not cover that in detail, but I recommend using these resources and especially the instafeedjs.com to further research your ideal set up of image population if you’re interested.
 
   // Authentication
   h2 4. Authentication
-  p Like I mentioned, the last bit of info you need to get your feed running on your website is to authenticate your request. The website I found most useful for this is #[a(href='http://instagram.pixelunion.net/' target='_blank') Pixel Union]. Simply click the “Generate Access Token” button and you will be prompted with entering your your username and password. (Check out the FAQs at the bottom of their website for more info about security and what Pixel Union has access to when they generate your access token.) After this, you will receive the access token and can use it in your website’s JavaScript code.
+  p Like I mentioned, the last bit of info you need to get your feed running on your website is to authenticate your request. The website I found most useful for this is #[a(href='http://instagram.pixelunion.net/' target='_blank') Pixel Union]. Simply click the “Generate Access Token” button and you will be prompted with entering your username and password. (Check out the FAQs at the bottom of their website for more info about security and what Pixel Union has access to when they generate your access token.) After this, you will receive the access token and can use it in your website’s JavaScript code.
 
   // Write the code
   h2 5. Write the code
