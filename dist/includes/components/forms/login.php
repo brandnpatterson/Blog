@@ -1,1 +1,1 @@
-<form action="index.php" method="post">Username:<br><input type="text" name="username"> Password:<br><input type="password" name="password"></form>
+<form action="index.php" method="post"><h1>Login</h1><h3>Username:</h3><input type="text" name="username"><h3>Password:</h3><input type="password" name="password" class="password"></form>

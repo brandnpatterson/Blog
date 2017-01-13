@@ -8,11 +8,8 @@
     <!-- nav -->
     <?php include 'dist/includes/components/nav.php' ?>
 
-    <!-- jumbotron -->
-    <?php include 'dist/includes/components/jumbotron.php' ?>
-
     <!-- content -->
-    <?php include 'dist/includes/content.php' ?>
+    <?php include 'dist/includes/components/forms/login.php' ?>
 
     <!-- footer -->
     <?php include 'dist/includes/components/footer.php' ?>
