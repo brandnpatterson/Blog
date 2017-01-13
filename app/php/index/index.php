@@ -1,5 +1,5 @@
 <html lang="en-US">
-  <?php include 'dist/includes/head.php' ?>
+  <?php include 'dist/includes/components/head.php' ?>
   <body>
     <div class="container header">
       <h1>@</h1>
@@ -10,43 +10,26 @@
       <a href="#latest">
         Latest
       </a>
+      <a href="#archive">
+        Archive
+      </a>
       <a href="#about">
         About Me
       </a>
       <!-- if not logged in, show sign-up, if logged in, show log-in -->
-      <?php include 'dist/includes/nav/sign-up.php' ?>
-      <?php include 'dist/includes/nav/log-in.php' ?>
+      <?php include 'dist/includes/components/nav/sign-up.php' ?>
+      <?php include 'dist/includes/components/nav/log-in.php' ?>
     </nav><!-- end container-nav -->
 
-    <div class="container jumbotron">
-      <h2 class="fade-in-one">
-        I've learned how to build things on the web.
-      </h2>
-      <h2 class="fade-in-two">
-        Here's what I'm up to today.
-      </h2>
-      <img src="dist/images/me.jpg"/>
-    </div><!-- end container-jumbotron -->
+    <!-- jumbotron -->
+    <?php include 'dist/includes/components/jumbotron.php' ?>
 
-    <div class="container">
-      <div id="content"></div>
-      <aside>
-        <a href="http://brandnpatterson.github.io">
-          Portfolio
-        </a>
-        <a href="https://github.com/brandnpatterson">
-          Github
-        </a>
-        <a href="https://twitter.com/brandnpatterson">
-          Twitter
-        </a>
-        <a href="mailto:brandnpatterson@gmail.com">
-          Email
-        </a>
-      </aside><!-- end social-media -->
-    </div><!-- end content -->
+    <!-- content -->
+    <?php include 'dist/includes/content.php' ?>
 
-    <?php include 'dist/includes/footer.php' ?>
+    <!-- footer -->
+    <?php include 'dist/includes/components/footer.php' ?>
+
     <script src="dist/js/bundle.js"></script>
   </body>
 </html>
