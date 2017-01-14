@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "autoprefixer": "postcss -u autoprefixer -r style.css",
-    "build:all": "npm run build:php & npm run build:includes & npm run build:css & npm run build:js",
+    "build:all": "npm run build:php & npm run build:includes & npm run build:css",
     "build:css": "npm run sass && npm run autoprefixer",
     "build:images": "imagemin app/images/* -o dist/images",
     "build:js": "webpack",

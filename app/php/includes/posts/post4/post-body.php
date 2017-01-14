@@ -12,7 +12,7 @@
     <a href="https://secure.php.net/manual/en/function.isset.php" target="_blank">
       Here
     </a>
-    is more detail about the isset() function. You'll see that inside of this function, you use PHP to search for "page" by using a "get" API request.
+    is more detail about the isset() function. You’ll see that inside of this function, you write a GET request for “page”. This will be used later in the navigation.
   </p>
   <p>
     The request will be unsuccessful at this point, but we will write the nav with this in it next. After it's all written, and when the "get" request is successful, it will set the $page variable to whatever the "page" query is equal to. This is written with a question mark, the word page, and then an equals sign followed by your content name.
