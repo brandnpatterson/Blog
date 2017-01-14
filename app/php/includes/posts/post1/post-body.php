@@ -1,4 +1,4 @@
-  <?php include 'post-header.php' ?>
+  <?php require 'post-header.php' ?>
   <div class="post post-body">
     <p>
       I've pursued the title of "Front End Web Developer" as I equipped myself with information. I quickly learned that involves HTML, CSS, and JavaScript, among many other tools.

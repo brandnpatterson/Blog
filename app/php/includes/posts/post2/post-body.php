@@ -1,4 +1,4 @@
-  <?php include 'post-header.php' ?>
+  <?php require 'post-header.php' ?>
   <div class="post post-body">
     <p>
       Initially this blog was constructed with a "latest.pug" file which was included via pug, then I switched it over to php in order to host a database in the future with MySQL. So now I'm up and running with PHP and including that newly named "latest.php" and it works great, but I need to have only a preview of the information on the latest page that is imported into the index page.

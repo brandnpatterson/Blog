@@ -1,11 +1,11 @@
 <nav class="container">
-  <a href="index.php#latest">
+  <a href="?page=latest">
     Latest
   </a>
-  <a href="index.php#archive">
+  <a href="?page=archive">
     Archive
   </a>
-  <a href="index.php#about">
+  <a href="?page=about">
     About Me
   </a>
   <a class="sign-up" href="signup.php">

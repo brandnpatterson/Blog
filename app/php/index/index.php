@@ -1,21 +1,39 @@
+<!DOCTYPE html>
 <html lang="en-US">
-  <?php include 'dist/includes/components/head.php' ?>
+  <?php require "dist/includes/components/head.php" ?>
   <body>
 
     <!-- header -->
-    <?php include 'dist/includes/components/header.php' ?>
+    <?php require "dist/includes/components/header.php" ?>
 
     <!-- nav -->
-    <?php include 'dist/includes/components/nav.php' ?>
+    <?php require "dist/includes/components/nav.php" ?>
 
     <!-- jumbotron -->
-    <?php include 'dist/includes/components/jumbotron.php' ?>
+    <?php require "dist/includes/components/jumbotron.php" ?>
 
-    <!-- content -->
-    <?php include 'dist/includes/content.php' ?>
+    <div class="container">
+
+      <!-- content -->
+      <div id="content">
+        <?php
+
+          if(isset($_GET['page'])) {
+            $page = $_GET['page'];
+          } else {
+            $page = "";
+          }
+          require 'dist/includes/components/case.php';
+
+        ?>
+      </div>
+
+      <!-- aside -->
+      <?php require "dist/includes/components/aside.php" ?>
+    </div>
 
     <!-- footer -->
-    <?php include 'dist/includes/components/footer.php' ?>
+    <?php require "dist/includes/components/footer.php" ?>
 
     <script src="dist/js/bundle.js"></script>
   </body>

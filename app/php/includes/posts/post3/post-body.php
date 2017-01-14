@@ -1,4 +1,4 @@
-<?php include 'post-header.php' ?>
+<?php require 'post-header.php' ?>
 <div class="post post-body">
   <p>
     I soon discovered that using the Instagram API is not as easy as calling and using data like you would via github's API, for example. Luckily, I found out about a library called
