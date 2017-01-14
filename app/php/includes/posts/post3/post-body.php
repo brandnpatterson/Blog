@@ -1,4 +1,7 @@
-<?php require 'post-header.php' ?>
+
+<!-- require post-header any time the post-body is viewed -->
+<?php require 'dist/includes/posts/post3/post-header.php' ?>
+
 <div class="post post-body">
   <p>
     I soon discovered that using the Instagram API is not as easy as calling and using data like you would via github's API, for example. Luckily, I found out about a library called
@@ -85,7 +88,7 @@
     </a>
     .
   </p>
-  <a href="#latest" class="go-back">
-    Go Back
-  </a>
+  
+  <!-- each post uses the same back navigation -->
+  <?php require 'dist/includes/posts/back.php' ?>
 </div>

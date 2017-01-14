@@ -1,0 +1,1 @@
+<!DOCTYPE html><html lang="en-US"> <?php require "dist/includes/components/head.php" ?> <body> <?php require "dist/includes/components/header.php" ?>  <?php require "dist/includes/components/nav.php" ?>  <?php require "dist/includes/components/login-form.php" ?>  <?php require "dist/includes/components/footer.php" ?> <script src="dist/js/bundle.js"></script></body></html>

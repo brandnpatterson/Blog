@@ -2,16 +2,16 @@
   <a href="?page=latest">
     Latest
   </a>
-  <a href="?page=archive">
+  <a href="index.php?page=archive">
     Archive
   </a>
-  <a href="?page=about">
+  <a href="index.php?page=about">
     About Me
   </a>
-  <a class="sign-up" href="signup.php">
+  <a class="signup" href="signup.php">
     Sign Up
   </a>
-  <a class="log-in" href="login.php">
+  <a class="login" href="login.php">
     Login
   </a>
 </nav><!-- end container-nav -->

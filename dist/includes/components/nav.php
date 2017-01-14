@@ -1,1 +1,1 @@
-<nav class="container"><a href="?page=latest">Latest </a><a href="?page=archive">Archive </a><a href="?page=about">About Me </a><a class="sign-up" href="signup.php">Sign Up </a><a class="log-in" href="login.php">Login</a></nav>
+<nav class="container"><a href="?page=latest">Latest </a><a href="index.php?page=archive">Archive </a><a href="index.php?page=about">About Me </a><a class="signup" href="signup.php">Sign Up </a><a class="login" href="login.php">Login</a></nav>
