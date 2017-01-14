@@ -1,5 +1,5 @@
 <nav class="container">
-  <a href="?page=latest">
+  <a href="index.php?page=latest">
     Latest
   </a>
   <a href="index.php?page=archive">
