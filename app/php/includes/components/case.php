@@ -23,6 +23,9 @@
     case "post3-body":
     require 'dist/includes/posts/post3/post-body.php';
     break;
+    case "post4-body":
+    require 'dist/includes/posts/post4/post-body.php';
+    break;
 
     // show post-header
     case "post1-header":
@@ -36,6 +39,10 @@
     case "post3-header":
     require 'dist/includes/posts/post3/post-header.php';
     require 'dist/includes/posts/post3/continue.php';
+    break;
+    case "post4-header":
+    require 'dist/includes/posts/post4/post-header.php';
+    require 'dist/includes/posts/post4/continue.php';
     break;
 
     // default home page is latest

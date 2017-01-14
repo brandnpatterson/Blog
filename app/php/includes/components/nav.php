@@ -8,10 +8,10 @@
   <a href="index.php?page=about">
     About Me
   </a>
-  <a class="signup" href="signup.php">
+  <a class="signup-nav" href="signup.php">
     Sign Up
   </a>
-  <a class="login" href="login.php">
+  <a class="login-nav" href="login.php">
     Login
   </a>
 </nav><!-- end container-nav -->

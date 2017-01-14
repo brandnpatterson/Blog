@@ -22,4 +22,9 @@
 
   <!-- each post uses the same back navigation -->
   <?php require 'dist/includes/posts/back.php' ?>
+
+  <!-- go to the next blog post -->
+  <a class="next" href="?page=post1-body">
+    Next >>
+  </a>
 </div>
