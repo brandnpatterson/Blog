@@ -20,7 +20,6 @@
   <p>
     (For example, on the latest post, the href of the "Continue Reading" link is as follows: href="?page=post4-body".)
   </p>
-  <div class="divider"></div>
   <h2>
     2. nav.php - set the "page" value to unique names for each anchor
   </h2>
@@ -28,7 +27,6 @@
   <p>
     On the nav.php file, notice that each anchor has "page" equal to something unique. This should describe the content, but it is not including (requiring) them quite yet. That is the next step in the switch statement.
   </p>
-  <div class="divider"></div>
   <h2>
     3. case.php - write the switch statement
   </h2>
@@ -37,10 +35,9 @@
     Above is the logic that handles what should be required into the index.php file depending on what the specific "page" value is. Again, this specific "page" value is decided in the nav.php file in each href attribute. You can write the actual switch statement anywhere, but I've decided to keep it in my components folder like any other part of the website.
   </p>
   <p>
-    Notice that in each "case" that a different file is required into the index.php file. On the first image, you'll see that the require statement produces whichever case is the result of this switch statement depending on each href any of the nav elements with the query "page" have. I didn't go into detail about the complete file structure of this project, but if you are interested, here is a link to the complete
+    Notice that in each “case” that a different file is required into the index.php file. On the first image above, you’ll see that the require statement is the result of the switch statement. That result is dependent on what the anchor’s “page” is equal to. Like I said, this can should be written in the href of each anchor. I didn’t go into detail about the complete file structure of this project, but if you are interested, here is a link to the complete
     <a href="https://github.com/brandnpatterson/brandnpatterson.surge.sh">Github repo.</a>
   </p>
-  <div class="divider"></div>
   <h2>
     It's really that simple! I hope this tutorial helped you understand switch statements in PHP and how to use them for navigation.
   </h2>

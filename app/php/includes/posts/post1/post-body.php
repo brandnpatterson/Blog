@@ -12,7 +12,6 @@
   <p>
     Alongside my hardware, I've refined a build system. Now I've probably spent more time on this than I should have, but for me a comfortable work environment is something to aspire for always.
   </p>
-  <div class="divider"></div>
   <p>
     As far as other tools are concerned, I was fortune enough to learn about package managers early enough to utilize them, although they were things I knew nothing about before that- Homebrew, Node, NPM. Then came Preprocessors, Bundlers, and all of the rest of those oh so helpful Task Runners. All while I did my best on Treehouse and Youtube hacking away at my completed projects.
   </p>
@@ -25,7 +24,6 @@
   <p>
     I've also ventured into Wordpress, PHP, and MySQL and I'm currently working on an E-commerce project using Woocommerce. The Content Management System (CMS) Wordpress is really popular and powerful. I don't normally like working away from the terminal and Atom.io, but I really enjoyed learning about how PHP includes views (pages) and is harnessed by Worpress. I look forward to continuing working with Wordpress as well as building things with PHP. It compells me how these different technologies harness routing of separate pages that then appear as one page.
   </p>
-  <div class="divider"></div>
   <p>
     <a href="https://www.youtube.com/watch?v=xN9QxPtK2LM&amp;t=16s">
       Curran Kelleher
