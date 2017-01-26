@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <?php require "dist/includes/components/head.php" ?>
+  <?php require "dist/components/head.php" ?>
   <body>
 
-    <!-- header -->
-    <?php require "dist/includes/components/header.php" ?>
+    <?php
 
-    <!-- nav -->
-    <?php require "dist/includes/components/nav.php" ?>
+      // header
+      require "dist/components/header.php";
+      // nav
+      require "dist/components/nav.php";
+      // jumbotron
+      require "dist/components/jumbotron.php";
+      // aside
+      require "dist/components/aside.php"
 
-    <!-- jumbotron -->
-    <?php require "dist/includes/components/jumbotron.php" ?>
+    ?>
 
     <div class="container">
 
@@ -23,16 +27,12 @@
           } else {
             $page = "";
           }
-          require 'dist/includes/components/case.php';
+          require 'case.php';
 
         ?>
       </div>
-
-      <!-- aside -->
-      <?php require "dist/includes/components/aside.php" ?>
     </div>
 
-    <!-- footer -->
-    <?php require "dist/includes/components/footer.php" ?>
+    <?php require "dist/components/footer.php" ?>
   </body>
 </html>

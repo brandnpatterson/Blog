@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <?php require "dist/includes/components/head.php" ?>
+  <?php require "dist/components/head.php" ?>
   <body>
 
-    <!-- header -->
-    <?php require "dist/includes/components/header.php" ?>
+    <?php
 
-    <!-- nav -->
-    <?php require "dist/includes/components/nav.php" ?>
+      // header
+      require "dist/components/header.php";
+      // nav
+      require "dist/components/nav.php";
+      // signup-form
+      require "dist/components/forms/signup-form.php";
 
-    <!-- content -->
-    <?php require "dist/includes/components/signup-form.php" ?>
+    ?>
 
-    <!-- footer -->
-    <?php require "dist/includes/components/footer.php" ?>
+    <?php require "dist/components/footer.php" ?>
 
     <script src="dist/js/bundle.js"></script>
   </body>

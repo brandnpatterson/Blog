@@ -1,1 +1,10 @@
-<!DOCTYPE html><html lang="en-US"> <?php require "dist/includes/components/head.php" ?> <body> <?php require "dist/includes/components/header.php" ?>  <?php require "dist/includes/components/nav.php" ?>  <?php require "dist/includes/components/signup-form.php" ?>  <?php require "dist/includes/components/footer.php" ?> <script src="dist/js/bundle.js"></script></body></html>
+<!DOCTYPE html><html lang="en-US"> <?php require "dist/components/head.php" ?> <body> <?php
+
+      // header
+      require "dist/components/header.php";
+      // nav
+      require "dist/components/nav.php";
+      // signup-form
+      require "dist/components/forms/signup-form.php";
+
+    ?> <?php require "dist/components/footer.php" ?> <script src="dist/js/bundle.js"></script></body></html>
