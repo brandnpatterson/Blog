@@ -7,4 +7,4 @@
           }
           require 'dist/includes/components/case.php';
 
-        ?> </div> <?php require "dist/includes/components/aside.php" ?> </div> <?php require "dist/includes/components/footer.php" ?> <script src="dist/js/bundle.js"></script></body></html>
+        ?> </div> <?php require "dist/includes/components/aside.php" ?> </div> <?php require "dist/includes/components/footer.php" ?> </body></html>

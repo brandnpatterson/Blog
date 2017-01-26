@@ -34,7 +34,5 @@
 
     <!-- footer -->
     <?php require "dist/includes/components/footer.php" ?>
-
-    <script src="dist/js/bundle.js"></script>
   </body>
 </html>

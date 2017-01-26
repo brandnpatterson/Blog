@@ -1,3 +1,0 @@
-/**
- * Webpack entry point
-**/

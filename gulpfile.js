@@ -15,7 +15,7 @@ gulp.task('stop', function(cb){
 gulp.task('mamp', ['start']);
 
 gulp.task('browser-sync', function() {
-  browserSync.init(['index.php', 'dist/css/*.css', 'dist/includes/*', 'dist/js/*.js'], {
+  browserSync.init(['index.php', 'dist/css/*', 'dist/includes/*'], {
     proxy: 'localhost:8888/surge%20blog',
     notify: false
   });
