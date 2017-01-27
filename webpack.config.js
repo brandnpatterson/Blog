@@ -1,8 +1,13 @@
+var debug = process.env.NODE_ENV !== 'production';
 var webpack = require('webpack');
 var path = require('path');
 
 module.exports = {
-  devtool: 'source-map',
+  devtool: debug ? 'inline-sourcemap' : null,
+  devServer: {
+    port: 8888,
+    stats: 'errors only'
+  },
   context: path.join(__dirname, './app'),
   entry: [
     './js/index.js',
@@ -23,7 +28,7 @@ module.exports = {
       }
     ]
   },
-  plugins: [
+  plugins: debug ? [] : [
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false }),
