@@ -12,5 +12,5 @@
     <a href="mailto:brandnpatterson@gmail.com">
       Email
     </a>
-  </aside><!-- end social-media -->
+  </aside>
 </div>

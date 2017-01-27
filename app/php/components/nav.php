@@ -8,10 +8,17 @@
   <a href="index.php?page=about">
     About Me
   </a>
-  <a class="signup-nav" href="signup.php">
-    Sign Up
-  </a>
-  <a class="login-nav" href="login.php">
-    Login
-  </a>
-</nav><!-- end container-nav -->
+  <?php if(isset($_SESSION['username'])): ?>
+    <a href="account.php" class="signup-nav username-session"><?php echo $_SESSION['username']; ?></a>
+    <a class="login-nav" href="logout.php">
+      Logout |
+    </a>
+  <?php else: ?>
+    <a class="signup-nav" href="signup.php">
+      Sign Up
+    </a>
+    <a class="login-nav" href="login.php">
+      Login
+    </a>
+  <?php endif; ?>
+</nav>

@@ -1,54 +1,48 @@
 <?php
-
   switch($page) {
-
     // show pages using the top navigation
-    case "latest":
+    case 'latest':
     require 'dist/pages/latest.php';
-    break;
-    case "about":
+      break;
+    case 'about':
     require 'dist/pages/about.php';
-    break;
-    case "archive":
+      break;
+    case 'archive':
     require 'dist/pages/archive.php';
-    break;
-
+      break;
     // show post-body
-    case "post1-body":
+    case 'post1-body':
     require 'dist/posts/post1/post-body.php';
-    break;
-    case "post2-body":
+      break;
+    case 'post2-body':
     require 'dist/posts/post2/post-body.php';
-    break;
-    case "post3-body":
+      break;
+    case 'post3-body':
     require 'dist/posts/post3/post-body.php';
-    break;
-    case "post4-body":
+      break;
+    case 'post4-body':
     require 'dist/posts/post4/post-body.php';
-    break;
-
+      break;
     // show post-header
-    case "post1-header":
+    case 'post1-header':
     require 'dist/posts/post1/post-header.php';
     require 'dist/posts/post1/continue.php';
-    break;
-    case "post2-header":
+      break;
+    case 'post2-header':
     require 'dist/posts/post2/post-header.php';
     require 'dist/posts/post2/continue.php';
-    break;
-    case "post3-header":
+      break;
+    case 'post3-header':
     require 'dist/posts/post3/post-header.php';
     require 'dist/posts/post3/continue.php';
-    break;
-    case "post4-header":
+      break;
+    case 'post4-header':
     require 'dist/posts/post4/post-header.php';
     require 'dist/posts/post4/continue.php';
-    break;
-
+      break;
     // default home page is latest
     default:
     require 'dist/pages/latest.php';
-    break;
+      break;
   }
-
 ?>

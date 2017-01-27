@@ -7,4 +7,4 @@
     ?>
     Brandon Patterson. All Rights Reserved.
   </a>
-</footer><!-- end footer-->
+</footer>
