@@ -9,9 +9,10 @@
     // bind parameters to the database row through POST
     $stmt->bindParam(':username', $_POST['username']);
     $stmt->bindParam(':password', password_hash($_POST['password'], PASSWORD_BCRYPT));
+    $message = '';
 
     if ( $stmt->execute() ) {
-      $message = 'New account created successfully!';
+      header('Location: /surge blog/success.php');
     } else {
       $message = 'Sorry, there must have been an issue creating your account';
     }
@@ -21,12 +22,7 @@
 <html lang="en-US">
   <?php require 'dist/components/head.php' ?>
   <body>
-    <?php
-      // header
-      require 'dist/components/header.php';
-      // nav
-      require 'dist/components/nav.php';
-    ?>
+    <?php require 'dist/components/header.php'; ?>
     <form action="signup.php" method="POST">
       <h1>
         Sign Up

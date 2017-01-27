@@ -9,7 +9,7 @@
     $results = $records->fetch(PDO::FETCH_ASSOC);
     $message = '';
 
-    if (count($results) > 0) {
+    if (count($results) > 0 && password_verify($_POST['password'], $results['password'])) {
       $_SESSION['username'] = $results['username'];
       header('Location: /surge blog');
     } else {
@@ -21,12 +21,7 @@
 <html lang="en-US">
   <?php require 'dist/components/head.php' ?>
   <body>
-    <?php
-      // header
-      require 'dist/components/header.php';
-      // nav
-      require 'dist/components/nav.php';
-    ?>
+    <?php require 'dist/components/header.php'; ?>
     <form action="login.php" method="POST">
       <h1>
         Login
