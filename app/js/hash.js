@@ -1,33 +1,50 @@
 /**
- * Inspired By Curran Kelleher October 2014
+ * Routing with AJAX using hashchange & href
 **/
 
-var $ = require('jquery');
+import $ from 'jquery';
 
 !function () {
 
-  var partialsCache = {};
+  // cacheDOM
+  const $content      = $('#content'),
+        $window       = $(window),
+        partialsCache = {};
 
+  // set initial state
+  location.hash = '#latest';
+
+  // Fetch the content paired with each fragmentId
   function getContent(fragmentId, callback) {
-    $('#content').load('dist/includes/' + fragmentId + '.html', function (content) {
-      partialsCache[fragmentId] = content;
-      callback(content);
-    });
+    // if the fragmentId is already stored in partialsCache, callback the fragmentId
+    if (partialsCache[fragmentId]) {
+      callback(partialsCache[fragmentId]);
+    // else load the content paired with the fragmentId
+    } else {
+      $content.load('dist/includes/' + fragmentId + '.html', (content) => {
+        partialsCache[fragmentId] = content;
+        callback(content);
+      });
+    }
   }
 
   function navigate() {
-    var fragmentId = location.hash.substr(1);
+    // return fragmentId with the first character removed (#)
+    const fragmentId = location.hash.substr(1);
 
-    getContent(fragmentId, function (content) {
-      $('#content').html(content);
-    });
+    // set the content div based on fragmentId
+    getContent(fragmentId, (content) => $content.html(content));
+
+    // set a default of #latest
+    if(!location.hash) {
+      location.hash = '#latest';
+    }
   }
 
-  if(!location.hash) {
-    location.hash = '#latest';
-  }
-
+  /** Events **/
+  // navigate to the initial fragmentId
   navigate();
 
-  $(window).on('hashchange', navigate);
+  // navigate when the fragmentId changes
+  $window.on('hashchange', navigate);
 }();
