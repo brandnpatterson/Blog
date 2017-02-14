@@ -44,6 +44,8 @@
           <?= $message ?>
         </p>
       <?php endif; ?>
+      <br />
+      <a class="forgot" href="forgot.php">Forgot your password?</a>
     </form>
     <?php require 'dist/components/footer.php' ?>
   </body>

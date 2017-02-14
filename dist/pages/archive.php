@@ -1,4 +1,4 @@
-<?php
+<h1>Archives:</h1> <?php
 
   // post 4
   require 'dist/posts/post4/post-header.php';
