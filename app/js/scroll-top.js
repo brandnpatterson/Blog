@@ -8,7 +8,8 @@ var $ = require('jquery');
 
   // cacheDOM
   var continueReading = '.continue-reading';
-  var $document = $(document);
+  var $document       = $(document);
+  var next            = '.next';
 
   function scrollTop() {
     $document.scrollTop($('.post-header').offset().top);
@@ -16,4 +17,5 @@ var $ = require('jquery');
 
   // Event
   $document.on('click', continueReading, scrollTop);
+  $document.on('click', next, scrollTop);
 }();
