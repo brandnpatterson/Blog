@@ -13,7 +13,7 @@
     "clean:images": "rimraf dist/images",
     "lint": "eslint app/js",
     "sass": "node-sass --output-style compressed -o dist/css app/sass",
-    "server": "browser-sync start --server --files='index.html, style.css, dist/index.min.js, dist/index.min.js.map' --no-notify --port 8888",
+    "server": "browser-sync start --server --files='index.html, dist/css/style.css, dist/js/bundle.js' --no-notify --port 8888",
     "start": "npm run clean && npm run build:all && npm run watch:all",
     "watch:all": "npm-run-all -p watch:css watch:js watch:pug watch:includes server",
     "watch:css": "onchange 'app/sass/**/*.sass' -- npm run build:css",
